@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HV9TNLE12M');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumiyaSakai-website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Simon-Glatzelの式</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">ニュース</a>
+            <a href="research.html">研究</a>
+            <a href="cv.html">CV</a>
+            <a href="outreach.html">アウトリーチ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Simon-Glatzelの式</h2>
+            <p>Simon-Glatzelの式は、物質の融点が圧力にどのように依存するかを表した式です。この関係式は以下のように表されます。</p>
+
+            <p>
+                $$T_{\rm m}=T_{\rm r} \left( \frac{P-P_{\rm r}}{a}\right)^{1/c}$$
+            </p>
+
+            <p><em>T<sub>r</sub></em>と<em>P<sub>r</sub></em>はある圧力における融点と圧力をそれぞれ表します。物質ごとに固有の<em>a</em>と<em>c</em>を持つとされます。</p>
+
+            <p>この式はClausius-Clapeyronの式から導出できることが知られています。以下では<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/pssb.2221090115" target="_blank">Boguslavskii, 1992</a>にしたがって導出します。</p>
+        </section>
+
+        <section>
+            <h2>Clausius-Clapeyronの式</h2>
+            <p>Clausius-Clapeyronの式は以下のような式です。</p>
+            <p>
+                $$\frac{dT}{dP}=\frac{\Delta V}{\Delta S}$$
+            </p>
+            <p>この式を活用するために、まず右辺のΔ<em>V</em>とΔ<em>S</em>を<em>P</em>=<em>P</em><sub>0</sub>においてテイラー展開します。</p>
+            <p>
+                $$\Delta V = \Delta V_{0} \left[1 + \Delta V_{0}^{-1} \left( \frac{d \Delta V}{dP}\right)_{P=P_{0}}\left( P-P_{0}\right) \cdots \right]$$
+                $$\Delta S = \Delta S_{0} \left[1 + \Delta S_{0}^{-1} \left( \frac{d \Delta S}{dP}\right)_{P=P_{0}}\left( P-P_{0}\right) \cdots \right]$$
+            </p>
+            <p>Clausius-Clapeyronの右式は以下のようにあらわすことができます。</p>
+            <p>
+                $$\begin{split}
+                \frac{\Delta V}{\Delta S} &= \frac{1}{\Delta S \Delta V^{-1}} 
+                \\&=\frac{\Delta V_{0}/\Delta S_{0}}{\left[1 + \Delta V_{0}^{-1} \left( \frac{d \Delta V}{dP}\right)_{P=P_{0}}\left( P-P_{0}\right) \cdots \right]\left[1 + \Delta S_{0}^{-1} \left( \frac{d \Delta S}{dP}\right)_{P=P_{0}}\left( P-P_{0}\right) \cdots \right]}\\
+                &\sim \frac{\Delta V_{0}/\Delta S_{0}}{1 + \left(\Delta S_{0}^{-1} \left( \frac{d \Delta S}{dP}\right)_{P=P_{0}}- \Delta V_{0}^{-1} \left( \frac{d \Delta V}{dP}\right)_{P=P_{0}}\right) \left( P-P_{0}\right)}
+                \end{split}$$
+
+            </p>
+            <p>したがってClausius-Clapeyronの式は以下のように表せます。
+            </p>
+            <p>
+                $$\begin{equation}
+                \begin{split}
+                dT= \frac{\left(\Delta V_{0}/\Delta S_{0}\right) dP}{1 + \left(\Delta S_{0}^{-1} \left( \frac{d \Delta S}{dP}\right)_{P=P_{0}}- \Delta V_{0}^{-1} \left( \frac{d \Delta V}{dP}\right)_{P=P_{0}}\right) \left( P-P_{0}\right)}
+                \end{split}
+                \end{equation}$$
+            </p>
+            <p>ところで、<em>T</em>を<em>P=P0</em>において1次のテイラー展開をすると</p>
+            <p>
+                $$\begin{split}
+                T&=T_{0}\left[1+\Delta T_{0}^{-1}
+                \left( \frac{dT}{dP} \right)_{P=P_{0}} \left(P-P_{0} \right) \right]\\
+                &=T_{0}\left[1+\Delta T_{0}^{-1}
+                \left( \frac{\Delta V_{0}}{\Delta S_{0}}\right) \left(P-P_{0} \right) \right]\\
+                \end{split}$$
+            </p>
+            <p>となります。ここで積分可能な式とするため、<em>T≠0</em>において両辺を<em>T</em>で割ると以下のようになります。</p>
+            <p>
+                $$\begin{equation}
+                \frac{dT}{T} = \frac{\left(\Delta V_{0}/\Delta S_{0}\right) dP}{T_{0} + \left\{\frac{\Delta V_{0}}{\Delta S_{0}} + \Delta T_{0} \left[ \Delta S_{0}^{-1} \left( \frac{d \Delta S}{dP}\right)_{P=P_{0}}- \Delta V_{0}^{-1} \left( \frac{d \Delta V}{dP}\right)_{P=P_{0}}\right]\right\} \left( P-P_{0}\right)}
+                \end{equation}$$
+            </p>
+            <p>さて、<em>a</em>と<em>c</em>を以下のように置きます。</p>
+            <p>
+                $$c=1+T_{0}\left[ \frac{1}{\Delta V_{0}} \left( \frac{dT}{dP} \right)_{P=P_{0}} - \frac{\Delta S_{0}}{\left(V_{0}\right)^{2}}\left( \frac{d\Delta V}{dP} \right)_{P=P_{0}}  \right]$$
+            </p>
+            <p>
+                $$a=\frac{\Delta S_{0} T_{0}}{\Delta V_{0} c}$$
+            </p>
+            <p>aとcを共に前式に代入し、<em>T0</em>から<em>T</em>へ積分します。このとき、Clausius-Clapeyronの式に注意して右辺の積分範囲をP0からPとすると、以下のような式になります。</p>
+            <p>
+                $$\int_{T_{0}}^{T} \frac{dT}{T} = \int_{P_{0}}^{P}\frac{1}{c}\cdot\frac{dP}{1+\frac{P-P_{0}}{a}} $$
+            </p>
+            <p>
+                $${\rm log}(T/T_{0}) = 1/c \cdot {\rm log}\left( 1+\frac{P-P_{0}}{a}\right)$$
+            </p>
+            <p>
+                $$T=T_{0}\left( 1+\frac{P-P_{0}}{a}\right)^{1/c}$$
+            <p>このようにSimon-Glatzelの式が導出されます。
+                <em>P<sub>0</sub></em>および<em>T<sub>0</sub></em>は融点となるある点における温度圧力のため、
+                <em>P<sub>r</sub></em>、<em>T<sub>r</sub></em>と書かれることもあります。</p>
+        </section>
+    </main>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>お問い合わせはこちらまで。</p>
+        <p>Email: f.sakai@eps.s.u-tokyo.ac.jp</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fumiya Sakai</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
