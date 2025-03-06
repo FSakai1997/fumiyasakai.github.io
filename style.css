@@ -10,15 +10,55 @@ body {
     color: #333;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    font-size: 1.2em;
+    /* margin-bottom: 10px; */
+    padding-left: 20px; /* ナビゲーションも左寄せ */
+    border-bottom: 2px solid black; /* 下線を追加 */
+    padding-bottom: 5px; /* 下線と文字の間隔を調整 */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: #0055a2;           /* ホバー時の文字色 */
+    border-radius: 5px;     /* 角を少し丸く */
+}
+
+hr {
+    border: 1px solid black;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 40%;
+    border-radius: 10px;
+}
+
 header {
-    background: #0055a2;
+    /*background: #fff;#0055a2;*/
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0 5px 0;
+    height: 130px;
     text-align: center;
 }
 
 header nav a {
-    color: #fff;
+    color: #333;
     margin: 0 15px;
     text-decoration: none;
 }
@@ -55,7 +95,12 @@ section {
 }
 
 
-h1, h2 {
+h1 {
+    color: #0055a2;
+    margin-bottom: 30px;
+}
+
+h2 {
     color: #0055a2;
 }
 
