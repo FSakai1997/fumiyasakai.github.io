@@ -93,6 +93,11 @@ section {
     padding: 0;            /* 左の余白を消す */
 }
 
+#grants {
+    list-style-type: none; /* 黒点を消す */
+    padding: 0;            /* 左の余白を消す */
+}
+
 #publication {
     list-style-type: none; /* 黒点を消す */
     padding: 0;            /* 左の余白を消す */
