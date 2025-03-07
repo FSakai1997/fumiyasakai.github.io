@@ -28,7 +28,11 @@ nav {
         align-items: center; /* 真ん中に配置 */
         gap: 10px; /* 縦の間隔を狭く */
     }
+    body {
+        margin-top: 100px; /* ナビゲーションの高さに合わせて調整 */
+    }
 }
+
 
 nav a {
     text-decoration: none;
