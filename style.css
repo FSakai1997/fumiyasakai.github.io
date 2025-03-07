@@ -13,12 +13,21 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    flex-wrap: wrap;  /* 画面が狭くなったら折り返す */
+    gap: 40px;  /* スマホ対応のため間隔を狭く */
     font-size: 1.2em;
-    /* margin-bottom: 10px; */
-    padding-left: 20px; /* ナビゲーションも左寄せ */
-    border-bottom: 2px solid black; /* 下線を追加 */
-    padding-bottom: 5px; /* 下線と文字の間隔を調整 */
+    padding-left: 20px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+/* スマホ画面（幅600px以下）の場合 */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* スマホでは縦並び */
+        align-items: center; /* 真ん中に配置 */
+        gap: 10px; /* 縦の間隔を狭く */
+    }
 }
 
 nav a {
