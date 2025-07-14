@@ -2,6 +2,7 @@
 
 // ニュースを動的に追加したい場合、JavaScriptで内容を更新できます。
 const recentNews = [
+    { date: "2025年7月14日", content:"JpGU2025学生優秀発表賞を受賞しました。"},
     { date: "2025年5月30日", content:"JpGU2025で発表しました。"},
     { date: "2025年2月25日", content: "共著論文がPRLで出版されました。" },
     { date: "2024年12月09日", content: "AGU24に参加しました。" },
