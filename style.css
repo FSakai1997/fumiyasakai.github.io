@@ -129,3 +129,42 @@ footer {
     margin-top: 20px;
 }
 
+/* ------------------------------------------- */
+/* ニュースの画像と文章のレイアウト制御（Flexbox） */
+/* ------------------------------------------- */
+
+.news-item {
+    display: flex;
+    align-items: flex-start;   /* 画像と文章の上端を揃える */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* ニュースアイテム内の画像エリア（左30%の幅） */
+.news-item .news-image-area {
+    /* 既存のsectionスタイルを上書きし、レイアウト用のパディングをリセット */
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    
+    flex: 0 0 30%; /* 伸縮なし、基準幅30% */
+    /* 必要に応じて、画像エリア自体の最大幅をここで設定してもOK */
+    /* max-width: 300px; */ 
+}
+
+/* 画像をコンテナの幅いっぱいに広げる */
+.news-item .news-image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ニュースアイテム内のテキストエリア（残りの幅） */
+.news-item .news-text-area {
+    flex: 1; /* 残りのスペースを占める */
+}
+
+/* テキスト（<p>タグ）のデフォルトの上マージンを削除し、画像の上端と完全に揃える */
+.news-item .news-text-area p {
+    margin-top: 0;
+}
