@@ -111,6 +111,15 @@ section {
     padding: 0;            /* 左の余白を消す */
 }
 
+#outreach {
+    list-style-type: none; /* 黒点を消す */
+    padding: 0;            /* 左の余白を消す */
+}
+
+#others {
+    list-style-type: none; /* 黒点を消す */
+    padding: 0;            /* 左の余白を消す */
+}
 
 h1 {
     color: #0055a2;
