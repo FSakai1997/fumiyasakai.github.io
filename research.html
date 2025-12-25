@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HV9TNLE12M');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HV9TNLE12M');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>research - Fumiya Sakai</title>
+    <title>RESEARCH - Fumiya Sakai</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="nav-logo">Fumiya Sakai</span>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="research.html" class="active">RESEARCH</a>
+                <a href="cv.html">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
         <h1>RESEARCH</h1>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="news.html">NEWS</a>
-            <a href="research.html">RESEARCH</a>
-            <a href="cv.html">CV</a>
-        </nav>
+        <p>高圧実験による地球・惑星深部の探求</p>
     </header>
 
-    <section>
-        <h2>軽元素の固液分配係数の決定による地球の外核・内核組成の同時制約</h2>
-        <p>&emsp;近年、はやぶさ2をはじめとした宇宙探査プロジェクトにより近宇宙のサンプルが直接採取できるようになりました。
-            しかし、地球の深部には依然として多くの謎が残っています。特に、地球全体のおよそ3割を占めるコアに関しては、未解明のことが多いです。
-            コア由来の試料は地球の表層に運ばれないため、直接的な研究が難しいことが知られています。</p>
-        <p>&emsp;地球コアの組成を推定する主要な手法の一つが地震波観測です。地震波の速度と密度のデータから、コアの組成についての制約が得られています。。
-            これまでの研究によると、コアの密度は純鉄よりも低く、そのため鉄よりも軽い"軽元素(Si, S, O, C, Hなど)"が含まれていることがわかりました。
-            しかし、これらの元素が具体的にどの程度含まれているのかは未解明です。
-        </p>
-        <p>&emsp;私は、外核と内核の密度がすでに推定されていることに着目して、外核と内核の両方の組成を同時に制約することで、より精密なコア組成の決定を試みています。
-            近年、軽元素同士の相互作用によって固液分配係数(元素の固体・液体間における分配比)が変化することが明らかになりました。したがって、コア組成を決定するには、こうした相互作用を理解することが不可欠です。
-        </p>
-        <p>&emsp;私は、ダイヤモンドアンビルセル（DAC）という超高圧発生装置を用いた高圧実験により、コアの圧力条件下での元素のふるまいを調べています。
-            この装置はダイヤモンドを加工して作られたアンビルで試料を挟み加圧することで、
-            最大で地球の中心を超えるほどの圧力下で実験を行うことができます。</p>
-    </section>
+    <div class="container">
+        
+        <section class="research-topic">
+            <div class="research-text">
+                <h2>地球コアの組成決定：<br>軽元素の分配挙動の解明</h2>
+                <p>
+                    近年、はやぶさ2をはじめとした宇宙探査プロジェクトにより近宇宙のサンプルが直接採取できるようになりました。
+                    しかし、地球の深部には依然として多くの謎が残っています。特に、地球全体のおよそ3割を占めるコアに関しては、未解明な点が多いのが現状です。
+                    コア由来の試料は地球の表層に運ばれないため、直接的なサンプリングが不可能だからです。
+                </p>
+                <p>
+                    地球コアの組成を推定する主要な手法の一つが地震波観測です。これまでの研究により、コアの密度は純鉄よりも低く、鉄よりも軽い<strong>"軽元素 (Si, S, O, C, Hなど)"</strong>が含まれていることがわかっています。
+                    しかし、これらの元素が具体的に「どの種類」で「どの程度」含まれているのかは、長年の論争の的です。
+                </p>
+                <p>
+                    私は、外核（液体）と内核（固体）の密度がすでに推定されていることに着目し、両方の組成を同時に制約することで、より精密なコア組成の決定を試みています。
+                    特に、軽元素同士の相互作用によって<strong>固液分配係数</strong>（元素の固体・液体間における分配比）が変化することに着目し、
+                    <strong>ダイヤモンドアンビルセル（DAC）</strong>を用いた超高圧実験により、地球中心核に匹敵する極限環境下での元素のふるまいを解明しています。
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="image/Earth.jpg" alt="地球内部構造とDAC実験のイメージ" onerror="this.style.display='none'">
+                <div class="img-caption">高圧実験による地球深部物質の探査</div>
+            </div>
+        </section>
 
-    <section>
-        <h2>火星の内部の構造・進化を解明する</h2>
-        <p>&emsp;近年、探査機InSightによる火震波(火星の地震波)の観測により、火星のコアの大きさが直接測定されました。その結果、これまでの重力測定から推定されていたよりもコアが大きく、密度が低いことが明らかになりました。
-            この低密度を説明するには、鉄に加えて"軽元素"が多く含まれている必要があります。特に火星にでは、火星表面における親銅元素の枯渇や、火星隕石に多量の硫黄が含まれているといった観測結果から、
-            火星コアには大量の硫黄が含まれている可能性が指摘されています。
-        </p>
-        <p>&emsp;そこで私は、鉄-硫黄系の高圧実験を通じて、火星コアの内部構造や進化を明らかにする研究を行っています。依然、鉄-硫黄系に関する高圧下での研究は不足しており、火星コア圧力におけるリキダス相図すら決定していないのが現状です。
-            本研究では火星の密度測定と火星コアの組成の関係を再構築し、どのような組成の固体が液体コアから結晶化するか、内核が存在するのか、またそれらがこれまで火星のダイナミクスにどのように影響を与えてきたのかを研究しています。
-        </p>
-    </section>
+        <hr class="research-divider">
 
-    <section id="contact">
+        <section class="research-topic reverse">
+            <div class="research-text">
+                <h2>火星の内部構造と進化：<br>硫黄に富むコアの謎</h2>
+                <p>
+                    NASAの探査機InSightによる火震波（火星の地震波）観測により、火星のコアの半径と密度が直接測定されました。
+                    その結果、コアは従来の予想よりも大きく、密度が低いことが明らかになりました。
+                    この低密度を説明するためには、鉄に加えて大量の軽元素、特に<strong>硫黄 (S)</strong> が必要であるとされています。
+                </p>
+                <p>
+                    火星表面における親銅元素の枯渇や、火星隕石の分析結果からも、火星コアには多量の硫黄が含まれている可能性が指摘されています。
+                    しかし、これほど硫黄に富んだ条件下での鉄-硫黄系の高圧実験データは不足しており、火星コア圧力における融解相図（リキダス相図）すら確立されていませんでした。
+                </p>
+                <p>
+                    そこで私は、鉄-硫黄系の高圧実験を通じて、火星コアの内部構造や熱進化の歴史を再構築しています。
+                    具体的には、「どのような組成の固体が液体コアから結晶化するのか」「火星に内核は存在するのか」といった問いに対し、
+                    実験データに基づいた新たなモデルを提唱しています。特に、<strong>Fe<sub>12</sub>S<sub>7</sub></strong> という相が内核として存在する可能性について研究を進めています。
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="image/FeS_phase.jpg" alt="火星内部構造とFe-S系相図" onerror="this.style.display='none'">
+                <div class="img-caption">火星コア中心圧力のFe-S系相図 (Sakai and Hirose, 2026)</div>
+            </div>
+        </section>
+
+    </div>
+
+    <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>お問い合わせはこちらまで。</p>
-        <p>Email: f.sakai@eps.s.u-tokyo.ac.jp</p>
+        <p>研究に関するお問い合わせは下記までお願いいたします。</p>
+        <p class="email">E-mail: f.sakai[at]eps.s.u-tokyo.ac.jp</p>
     </section>
 
     <footer>

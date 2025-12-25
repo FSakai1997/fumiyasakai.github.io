@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HV9TNLE12M');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HV9TNLE12M');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FumiyaSakai-website</title>
-
+    <title>Fumiya Sakai</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>HOME</h1>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="news.html">NEWS</a>
-            <a href="research.html">RESEARCH</a>
-            <a href="cv.html">CV</a>
-        </nav>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="nav-logo">Fumiya Sakai</span>
+            <div class="nav-links">
+                <a href="index.html" class="active">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="research.html">RESEARCH</a>
+                <a href="cv.html">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Fumiya Sakai</h1>
+            <p class="subtitle">Ph.D. Candidate in Earth and Planetary Science</p>
+            <p class="affiliation">The University of Tokyo / Hirose Lab</p>
+        </div>
     </header>
 
-
-    <section id="gallery">
-        <div class="image-container">
-            <img src="image/profile.jpg" alt="image">
+    <section id="about" class="container">
+        <div class="profile-layout">
+            <div class="profile-image">
+                <img src="image/profile.jpg" alt="Fumiya Sakai">
+            </div>
+            <div class="profile-text">
+                <h2>Profile</h2>
+                <p class="name-ja">坂井 郁哉 <span class="name-en">(Fumiya Sakai)</span></p>
+                <ul class="profile-list">
+                    <li>東京大学大学院 理学系研究科 地球惑星科学専攻</li>
+                    <li>固体地球科学講座 廣瀬研究室 博士課程3年</li>
+                    <li>専門：高圧実験、地球・惑星深部科学</li>
+                </ul>
+                <a href="cv.html" class="btn">View Full CV</a>
+            </div>
         </div>
     </section>
 
-
-    <section id="about">
-        <h2>Profile</h2>
-        <p>坂井 郁哉 (Fumiya Sakai)</p>
-        <p>東京大学大学院　理学系研究科　地球惑星科学専攻</p>
-        <p>固体地球科学講座　廣瀬研究室　博士課程3年</p>
-        <p>E-mail: f.sakai[at]eps.s.u-tokyo.ac.jp</p>
-    </section>
-
-    <section id="news">
+    <section id="news" class="container bg-light">
         <h2>Recent News</h2>
-        <ul id="recent-news">
-            <!-- JavaScriptでニュース項目を追加可能 -->
-        </ul>
+        <ul id="recent-news" class="news-list">
+            </ul>
+        <div style="text-align: right; margin-top: 10px;">
+            <a href="news.html" class="text-link">ニュース一覧へ &rarr;</a>
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>お問い合わせはこちらまで。</p>
-        <p>Email: f.sakai@eps.s.u-tokyo.ac.jp</p>
+        <p>研究に関するお問い合わせは下記までお願いいたします。</p>
+        <p class="email">E-mail: f.sakai[at]eps.s.u-tokyo.ac.jp</p>
     </section>
 
     <footer>
@@ -64,4 +76,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,351 +1,481 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HV9TNLE12M');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HV9TNLE12M');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>news - Fumiya Sakai</title>
+    <title>NEWS - Fumiya Sakai</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>NEWS</h1>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="news.html">NEWS</a>
-            <a href="research.html">RESEARCH</a>
-            <a href="cv.html">CV</a>
-        </nav>
-    </header>
 
-    <section>
-        <h2>ニュース</h2>
-        <!-- ニュースを追加 -->
-
-        <h3>2025.12.17  主著論文がEPSLで出版されました</h3>
-        <p> 主著論文はEarth and Planetary Science Lettersにて出版されました。</p>
-        <p>近年の火星探査(InSight)により、火星のコアはこれまで考えられていたよりも密度が低く、
-        硫黄などの軽元素を大量に(15 wt%以上)含んでいることが明らかになりました。しかし、これほど硫黄に富んだ環境で、火星中心部(約40 GPa)
-        においてどのような物質が安定に存在するのか、その状態図は未解明のままでした。
-        <br>
-        この系は、Fe3S、Fe2S、Fe12S7、Fe3S2といった多数の中間化合物が存在し、極めて複雑です。
-        そこで本研究では、マルチアンビル装置を用いて高圧下で均質な出発物質(Fe2SやFe3S2)を予め合成し、
-        それをダイヤモンドアンビルセルで火星コア条件まで加圧加熱することで、高圧下の精密な相関係を明らかにしました。
-        <br>
-        実験の結果、これまで議論されていたFe3S2という硫化物は、29 GPa以上では分解してしまうことが判明しました。
-        その代わりに、Fe12S7という硫化物が、液体の鉄から直接晶出することが明らかになりました。これは、Fe12S7から内核の可能性を示唆します。
-        </p>
-        <br>
-        <p>Sakai, F., Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 at the inner core?, Earth and Planetary Science Letters, 675, 119785, 2026. </p>
-        <a href= "https://doi.org/10.1016/j.epsl.2025.119785"> https://doi.org/10.1016/j.epsl.2025.119785 </a></p>
-        <br>
-        <br>
-
-        <h3>2025.10.03 AIRAPT-29にて、Student Poster Awardを受賞しました</h3>
-
-        <div class="news-item">
-            <section class="news-image-area" id="gallery">
-                <div class="image-container">
-                    <img src="image/AIRAPT_29.JPG" alt="AIRAPT-29 Student Poster Award 受賞の集合写真">
-                </div>
-            </section>
-
-            <div class="news-text-area">
-                <br>
-                <p>9月28日から10月3日にかけて行われたAIRAPT-29にて、AIRAPT-29 Student Poster Awardを受賞しました。
-                本研究は、地球の外核・内核間の水素とケイ素の分配について、軽元素間の相互作用を明らかにする目的で実施しました。
-                従来、鉄中の水素の定量は鉄の格子体積の膨張から推定するほかありませんでしたが、今回は、近年廣瀬研究室と北海道大学の坂本先生との共同研究で
-                開発を進めているクライオSIMSを活用し、鉄中の水素を直接イメージングして分配係数を求めました。その点を評価して頂けたのだと思います。</p>
-                <br>
-                <p>本研究を実施するにあたってお世話になった指導教員の廣瀬先生、北海道大学の坂本先生、圦本先生、
-                そして今回となるクライオSIMSの技法を確立した田川さん、彦坂さん、幾田に特に感謝申し上げます。
-                </p>
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="nav-logo">Fumiya Sakai</span>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html" class="active">NEWS</a>
+                <a href="research.html">RESEARCH</a>
+                <a href="cv.html">CV</a>
             </div>
         </div>
-        <br>
-        <br>
+    </nav>
 
-        <h3>2025.09.28-10.03  AIRAPT-29で発表しました</h3>
-        <p>9月28日から10月3日にかけて行われた29th International Conference on High Pressure Science and Technology (AIRAPT-29)に参加してきました。
-            本国際会議は地球科学に限らず、物理や食品などのすべての高圧分野の研究者が世界中から集う集会となっています。
-            今回はFe-Si-Hの固液分配と相図の決定について発表いたしました。本研究は北海道大学の坂本先生、圦本先生との共同研究となります。
-     　 <br>
-        <br>
+    <header class="page-header">
+        <h1>NEWS</h1>
+        <p>最新の研究成果と活動報告</p>
+    </header>
 
-        <h3>2025.09.26  共著論文がJGR:Solid Earthで出版されました</h3>
-        <p>研究室の元ポスドクのSuyuとの共著論文が出版されました。ダイヤモンドアンビルセル(DAC)とX線回折測定(XRD)から
-            液体Fe-Hの密度測定を行いました。X線の散漫散乱から密度を測定するにあたり、Kuwayama et al. (2020 PRL)らが開発したS(Q)を延長する手法を用いることで、
-            超高圧下における密度測定を可能としました。得られた密度をもとに液体Fe-Hの状態方程式を決定し、地球のコアにおける水素量について議論しています。
-            本研究はSPring-8, BL10XUで行った実験となります。
-        <br>
-        <p>Suyu Fu,  Kei Hirose,  Shunpei Yokoo,  Fumiya Sakai,  Kenta Oka,  Hydrogen in the Earth's Outer Core From Density Measurements of Liquid Fe-H up to 102 GPa and 4,100 K. Journal of Geophysical Research: Solid Earth, 130(10), e2025JB031934, 2025. </p>
-        <a href= "https://doi.org/10.1029/2025JB031934">https://doi.org/10.1029/2025JB031934 </a></p>
-        <br>
-        <br>
+    <section class="container news-container">
 
-        <h3>2025.09.04-05  特定放射光施設(SpRUC)シンポジウム2025に参加しました</h3>
-        <p>2025年9月4、5日に宮城県仙台で行われた特定放射光施設(SpRUC)シンポジウム2025に参加しました。SPring-8の大学院生提案型課題(長期型)で行っている、
-            火星のコアに着目した液体FeSの密度決定に関してポスター発表を行いました。
-        <br>
-        <p>SpRUCシンポジウム2025:<a href= "http://www.spring8.or.jp/ext/ja/spruc/sprucsymposium2025.html"> http://www.spring8.or.jp/ext/ja/spruc/sprucsymposium2025.html </a></p>
-        <br>
-        <br>
-        <h3>2025.07.14  JpGU2025学生発表優秀賞を受賞しました</h3>
-        <p>2025年5月25日から30日に千葉県で開催されたJpGU2025で発表した内容が学生優秀発表賞を受賞しました。
-            共著者の皆様、審査に携わってくださった皆様に心より感謝申し上げます。</p>
-        <br>
-        <br>
-        <h3>2025.08.14  SPring-8 NEWSに紹介されました</h3>
-        <p>SPring-8の広報誌、SPring-8 NEWSにて、"SPring-8で研究する学生"として紹介されました。
-        <br>
-        <p>SPring-8 NEWS:<a href= "http://www.spring8.or.jp/ja/news_publications/publications/news/no_120/#students"> http://www.spring8.or.jp/ja/news_publications/publications/news/no_120/#students </a></p>
-        <br>
-        <br>
-        <h3>2025.07.14  JpGU2025学生発表優秀賞を受賞しました</h3>
-        <p>2025年5月25日から30日に千葉県で開催されたJpGU2025で発表した内容が学生優秀発表賞を受賞しました。
-            共著者の皆様、審査に携わってくださった皆様に心より感謝申し上げます。</p>
-        <br>
-        <br>
-        <h3>2025.05.25-05.30 JpGU2025に参加しました。</h3>
-        <p>2025年5月25日から30日にかけて千葉県で開催された国際学会「Japan Geoscience Union Meeting 2025（JpGU2025）」に参加し、口頭発表を行いました。
-            発表では、XRD測定から液体FeSの密度を測定する研究を発表しました。
-            得られた液体FeSの圧力-温度-密度関係をもとに状態方程式をアップデートし、
-            火星のコアの密度を説明するためには先行研究で推定されているよりも多くの硫黄が必要であることを指摘しました。
-        </p>
-        <br>
-        <p>Sakai, F., Hirose, K., Yokoo, S., Fu, S., Determination of liquid FeS density under Martian core conditions by X-ray diffraction measurements, Japan Geoscience Union Meeting 2025, SCG48-02, Japan, (Chiba, 2025.5.30). 口頭</p>
-        <br>
-        <br>
-        <h3>2025.02.25 共著論文がPRLで出版されました。</h3>
-        <p>　研究室の後輩・竹澤君との共著論文が、Physical Review Lettersに掲載され、重要な成果として「Editors’ Suggestion」に選ばれるとともに、「Synopsis」にて解説されました。
-            さらに、本論文の内容が当該号の表紙として採用されました。
-            <br>
-            　本論文では、5万〜54万気圧の条件下で鉄(Fe)とヘリウム(He)の反応を、格子体積の膨張を通して報告しています。
-            さらに台湾・中央研究院のHsu教授、北海道大学の坂本准教授および三輪招聘教員との共同研究により、以下の成果を得ました。</p>
-            <p>・第一原理計算を用いてFeHe化合物が動的に安定であることを確認</p>
-            <p>・クライオSIMSを用いて鉄中のHeの直接測定</p>
-            <p>　本研究では、鉄とヘリウムが形成する全く新しい化合物を、実験・理論計算・質量分析の三分野のコラボレーションによって
-            証明しました。
-            特に興味深いのは、fcc構造のFe-He化合物において、Heが四面体サイトに侵入することが確認した点です。
-            これは、Fe-H合金でHが八面体サイトに侵入する場合と対照的であり、重要な知見となります。
-            <br>
-            　また、DAC試料の金属中の貴ガス測定は非常に難易度が高い技術でした。鉄は常圧化ではbcc構造を取り、貴ガスを放出してしまいます。
-            この貴ガスの放出を抑えるためには、極低温での測定、クライオSIMSによる測定が不可欠でした。
-            本測定のために測定技術の開発と調整を行ってくださった
-            坂本先生と三輪先生には大変感謝しています。
-            <br>
-            <br>
-            詳細は、以下の原論文やプレスリリース・解説記事をぜひご覧ください。</p>
-        <br>
-        <p>東京大学プレスリリース：<a href= "https://www.s.u-tokyo.ac.jp/ja/press/10669/">https://www.s.u-tokyo.ac.jp/ja/press/10669/ </a></p>
-        <p>北海道プレスリリース：<a href= "https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf">https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf</a></p>
-        <p>Synopsis：<a href= "https://physics.aps.org/articles/v18/s22">https://physics.aps.org/articles/v18/s22 </a></p>
-        <br>
-        <p>Takezawa, H., Hsu, H., Hirose, K., Sakai, F., Fu, S., Gomi, H., Miwa, S., Sakamoto, N.,  Formation of Iron-Helium Compounds under High Pressure. Pysical Review Letters 134, 084101, 2025. </p>
-        <a href= "https://doi.org/10.1103/PhysRevLett.134.084101">https://doi.org/10.1103/PhysRevLett.134.084101 </a></p>
-        <br>
-        <br>
-        <h3>2024.12.09-12.13 AGU24に参加しました。</h3>
-        <p>2024年12月09日から13日にワシントンD.C.で開催されたAGU24のannual meetingに参加し、ポスター発表を行いました。
-            発表内容は、X線回折実験による、FeS液体密度の測定です。多くの方に興味を持って頂けたうえ、実りのある議論をすることができました。</p>
-        <br>
-        <p>Fumiya Sakai, Kei Hirose, Shunpei Yokoo, Suyu Fu, Liquid Density of FeS under Martian Core Conditions,American Geophysical Unions Annual Meeting 2024 (AGU24), USA, (Washington D.C., 2024.12.10). Poster</p>
-        <br>
-        <br>
-        <h3>2024.09.03-2024.12.01 IPGPに訪問しています。</h3>
-        <p>2024年9月から11月末までの3か月間、パリ地球物理学研究所(IPGP)に訪問します。
-            Caracas先生のもとで、機械学習ポテンシャルを用いた第一原理計算について勉強します。</p>
-        <br>
-        <h3>2024.07.12  JpGU2024学生発表優秀賞を受賞しました</h3>
-        <p>2024年5月26日から31日に千葉県で開催された「日本地球惑星科学連合大会 2024（JpGU2024）」
-        で発表した内容が学生優秀発表賞を受賞しました。審査に携わってくださった皆様に心より感謝申し上げます。</p>
-        <br>
-        <br>
-        <h3>2024.05.26-05.31 JpGU2024に参加しました。</h3>
-        <p>2024年5月26日から31日に千葉県で開催された国際学会「Japan Geoscience Union Meeting 2024（JpGU2024）」に参加し、口頭発表を行いました。
-            発表では、Fe3S2とFe2Sの融解実験を通してFe-FeS系の相図を決定し、
-            その相図をもとに、火星のコアにおいてFe12S7 からなる内核が結晶化する可能性について議論しました。</p>
-        <br>
-        <p>Sakai, F., Hirose, K.,Melting Experiments on Fe3S2 and Fe2S and the Phase Diagram of the Fe-FeS System under Martian Core Conditions, Japan Geoscience Union Meeting 2024, SIT16-03, Japan, (Chiba, 2024.5.29). 口頭</p>
-        <br>
-        <br>
-        <h3>2024.05.20 共著論文がarXivにあがりました</h3>
-        <p>研究室の後輩である竹澤君との共著論文がarXivにアップロードされました。
-            本論文では、8万〜40万気圧の条件下でFeとHeが反応することを、格子体積の膨張を通して報告しています。
-            特に注目すべき点は、Fe-He化合物が常圧に回収可能であることが確認されたことで、これはHe吸蔵合金としての応用可能性を示しています。
-            さらに、第一原理計算により、FeHe化合物が動的に安定であることも確認しました。
-            この際、fcc構造のFe-He化合物においてHeは四面体サイトに侵入することが確認されました。
-            これは、Fe-H合金でHが八面体サイトに侵入する場合と対照的であり、興味深い結果です。
-            詳細については、以下の原論文をぜひご覧ください。</p>
-        <br>
-        <p>Takezawa, H., Hsu, H., Hirose, K., Sakai, F., Fu, S., Gomi, H.,  Formation of Iron-Helium Compounds under High Pressure. arXiv. https://doi.org/10.48550/arXiv.2405.11810 </p>
-        <br>
-        <br>
-        <h3>2024.05.11-17 EPOE2024に参加しました。</h3>
-        <p>2024年5月13日から17日にフランス・パリで開催された
-        「Earth and Planets Origin and Evolution Workshops 2024」に参加し、ポスター発表を行いました。
-        このワークショップでは、惑星形成から地球内部の構造、さらには惑星探査まで、幅広い分野にわたる発表があり、
-        さまざまな最新の研究に触れることができました。
-        私はこれまで、他分野で発表される研究結果をそのまま受け入れてしまいがちでしたが、
-        今回のワークショップでは質疑応答が特に活発であり、
-        各研究が実際にどのように受け止められているのかを直接感じることができました。</p>
-        <br>
-        <p>Sakai, F., Hirose, K., Possible Crystallization of Fe12S7 at the Martian Inner Core, Earth and Planets Origin and Evolution Workshops 2024, France, (Paris, 2024.05.16). ポスター </p>
-        <br>
-        <br>
-        <h3>2023.12.11-15 AGU23に参加しました。</h3>
-        <p>2023年12月11日から15日にアメリカ・サンフランシスコで開催された
-            「American Geophysical Union Annual Meeting（AGU23）」に参加し、口頭発表を行いました。
-            発表では、Fe3S2およびFe12S7の安定領域を決定し、さらにFe12S7の状態方程式を導出しました。
-            また、このFe12S7の密度データを基に、火星のコアにおいてFe12S7が結晶化する可能性についても議論しました。
-            詳しい内容については、ぜひ発表予稿をご覧ください。</p>
+        <div class="year-toggle" onclick="toggleYear('year-2025')">2025年 <span>+</span></div>
+        <div id="year-2025" class="year-archive" style="display: open;">
             
-        <p>なお、今回の学会参加にあたり、日本高圧力学会の「学生海外発表奨励金」の支援をいただきました。
-            この場を借りて、ご支援いただいた日本高圧力学会に深く感謝申し上げます。</p>
-        <br>
-        <p>学生海外発表奨励金:<a href= "https://www.highpressure.jp/abroad.html"> https://www.highpressure.jp/abroad.html </a></p>
-        <p>Sakai, F., Hirose, K., Gomi, H., Hiraoka, N., S-rich Sulfide Fe12S7 may Crystallize in the Martian Core, American Geophysical union Fall meeting 2023, MR42A-05, USA, (San Fransisco, 2023.12.14). Oral Presentation </p>
-        <br>
-        <br>
-        <h3>2023.11.05 主著論文がEarth and Planetary Science Lettersで出版されました</h3>
-        <p>主著論文がEarth and Planetary Science Lettersで出版されました！</p>
-            <p>本研究では、Fe-Si-S試料を用いた高温高圧融解実験を約200万気圧まで行い、SiとSの固液分配係数を求めました。
-            これは地球の外核（液体）と内核（固体）の間での軽元素の分配を模擬したもので、重要な知見を提供しています。            
-            本研究の結果、液体中にSiが存在するとSの分配係数が減少し、逆にSが存在するとSiの分配係数が増加することがわかりました。
-            このことは、内核への軽元素分配を考える際に、軽元素同士の相互作用を考慮する必要があることを示唆しています。
-            従来はSの固液分配係数が0.8とされており、内核がSに富むと考えられていました。
-            しかし、今回の研究で示された軽元素間の相互作用を考慮すると、外核中にSiが含まれる場合、
-            内核にSが含まれない可能性があることが示唆されます。
-            さらに本研究では、固液分配係数に基づき、外核と内核の物性を同時に説明できる組成のペアも推定しました。
-            詳しい内容については、ぜひ以下の原論文をご覧ください！</p>
-        <br>
-        <p>Partitioning of silicon and sulfur between solid and liquid iron under core pressures: Constraints on Earth's core composition
-            <a href= "https://doi.org/10.1016/j.epsl.2023.118449">https://doi.org/10.1016/j.epsl.2023.118449 </a></p>
-        <br>
-        <br>
-        <h3>2023.10.18-20 台湾のワークショップに参加しました。</h3>
-        <p>台湾・台北の中央研究院で開催されたワークショップ
-            「From Disks to Planets: Formation and Early Evolution」に参加し、発表を行いました。</p>
-        <br>
-        <p>発表タイトル：
-            "Inner core crystallization constrains the core composition"</p>
-        <p>概要：
-            地球のコアの密度は純鉄よりも小さく、このことからコアには軽元素が含まれていると考えられています。
-            従来、外核の密度欠損を説明するためにコア中の軽元素量が推定されてきましたが、
-            本研究では、これまでの制約条件に加え、リキダス相関係と固液分配係数を活用することで、
-            内核の密度欠損についても新たな制約条件を設けることが可能となりました。
-            本発表では、これらの手法に基づき、どの程度まで軽元素の組成に対する制約が厳密に行えるかについて議論しました。</p>
-        <br>
-        <p>Sakai, F., Hirose, K., Inner Core Crystallization Constrains the Core Composition,
-            Workshop: From Disks to Planets: Formation and Early Evolution, Taiwan, (Taipei, 2023.10.19). Oral Presentation
-        </p>
-        <br>
-        <br>
-        <h3>2023.10.01 SPring-8の大学院生提案型課題(長期)が採用されました</h3>
-        <p>大学院生提案型課題（長期型）がSPring-8で採用されました！
-            さらに、この採用に伴い、高輝度光科学研究センターからJASRI奨励研究生の称号をいただくことになりました。
-            博士課程の期間中、BL10XUでのシフトタイムもいただけたので、
-            しっかりと成果を出せるように実験に取り組みたいと思います。これからの実験がとても楽しみです！</p>
-        <br>
-        <p>参考：<a href="http://www.spring8.or.jp/ja/students/budding/">http://www.spring8.or.jp/ja/students/budding/ </a> </p>
-        <br>
-        <br>
-        <h3>2023.03.12-14 第15回地学オリンピックの学生チューターを務めました</h3>
-        <p>茨城県つくば市で開催された第15回地学オリンピック本選で学生チューターを務めました。
-            地学オリンピックは中学生から高校生の国際地学オリンピックの代表選考も兼ねています。
-            私が参加した10年前と比べても、参加者のレベルが著しく向上しており、地学教育の進歩を実感しました。
-            今回選考された日本代表の中には高校の後輩もおり、国際地学オリンピックでの活躍を強く期待しています。</p>
-        <br>
-        <p>地学オリンピック：<a href="https://jeso.jp/index.html">https://jeso.jp/index.html </a> </p>
-        <br>
-        <br>
-        <h3>2023.03.07 東京大学理学系研究科研究奨励賞を受賞しました！</h3>
-        <p>修士課程の理学系研究科研究奨励賞を受賞しました。
-            修士課程中に行ったダイヤモンドアンビルセルを用いたさまざまな研究が評価されたようです。
-            来年から博士課程に進学しますが、賞に泥を塗らないよう、気を引き締めて頑張りたいと思います。</p>
-        <br>
-        <p><a href="https://warp.ndl.go.jp/info:ndljp/pid/12972979/www.s.u-tokyo.ac.jp/ja/awards/encouragement/R4.html">https://warp.ndl.go.jp/info:ndljp/pid/12972979/www.s.u-tokyo.ac.jp/ja/awards/encouragement/R4.html</a></p>
-        <br>
-        <br>
-        <h3>2022.12.13 第63回高圧討論会でポスター発表をしました</h3>
-        <p>立命館大学で開催された第63回高圧討論会でポスター発表を行いました。発表のタイトルと概要は以下の通りです。</p>
-        <br>
-        <p>タイトル 1P58: Fe3S2 組成のコア圧力下その場 XRD 測定と Fe12S7の状態方程式の決定</p>
-        <p>概要：マルチアンビル装置で合成したFe3S2をDACに詰め、高圧その場X線回折実験を行いました。
-            その結果、Fe3S2がFe12S7とFeSに分解することを突き止めました。
-            また、Fe12S7の状態方程式を決定し、火星コアでの挙動について議論しました。
-            これらの議論に基づき、火星コアに内核が存在する可能性を指摘しました。</p>
-        <br>
-            <p>初めてのポスター発表を経験させていただき、多くの方々にお話を聞いていただきました。ありがとうございました。</p>
-        <br>
-        <br>
-        <h3>2022.09.28 学術振興会特別研究員(DC1)に採用内定しました！</h3>
-        <p>学術振興会（JSPS）の特別研究員（DC1）に採用内定しました。来年度からD1として3年間の採用となります。
-            私の研究テーマは、火星の内部構造の解明です。
-            支援をいただけることになったので、気を引き締めて頑張りたいと思います。</p>
-        <br>
-        <br>
-        <h3>2022.08.22-26 第10回対称性・群論トレーニングコースに参加しました</h3>
-        <p>日本結晶学会主催の第10回対称性・群論トレーニングコースに参加しました。
-            このトレーニングコースでは、鉱物学において非常に重要な結晶学の基礎について、
-            つくばのKEKでネスポロ・マッシモ先生による集中講義が5日間にわたって行われました。
-            演習を通じて、点群や格子の取り方についてより深く理解することができました。
-            今後の研究において、このコースで得た知見を活かしていきたいと思います。</p>
-        <br>
-        <p>
-        (参照)　対称性・群論トレーニングコース
-        <a href="http://pfwww.kek.jp/trainingcourse/index.html">http://pfwww.kek.jp/trainingcourse/index.html </a> </p>
-        <br>
-        <br>
-        <h3>2022.08.03 	東京大学理学部オープンキャンパスライブ講演2022にて、学生講演をしました</h3>
-        <p>東京大学理学部オープンキャンパスライブ講演2022にて、地球惑星物理学科の学生講演を坂井が担当しました。
-        高校生に向けて地球惑星科学の魅力と、自身の研究の紹介を行いました。</p>
-        <br>
-        <p>講演：地球の"コア"な話～高圧実験で見る地球の深部～</p>
-        <br>
-        <br>
-        <h3>2022.07.18 国際学会IMA2022で発表しました</h3>
-        <p>2022年7月、フランスのリヨンで開催された「国際鉱物学会 第23回総会（IMA2022）」に参加し、
-            口頭発表を行いました。私の研究では、Fe-Si-S試料における固液分配をコア圧力下で実施し、
-            液体中のシリコン（Si）と硫黄（S）の相互作用が固液分配係数に与える影響を調査しました。
-            詳細については、発表予稿をご覧ください！</p>
-        <br>
-        <p>Sakai, F., Hirose, K., Yokoo, S., Solid-Liquid Partitioning in the Fe-Si-S System to the Core Pressure Range,
-             23rd General Meeting of the International Mineralogical Association (IMA2022), OL01_3, France, (Lyon, 2022.07.18).
-              Oral Presentation </p>
-        <br>
-        <br>
-        <h3>2022.05.17 主著論文がGeochemical Perspectives Lettersで出版されました</h3>
-        <p>主著論文が Geochemical Perspectives Letters にて出版されました！</p>
-        <br>
-        <p>本論文では、Fe-C-O試料の融解実験を約200GPaまで行い、Fe-C-O系における鉄に富んだ領域の高圧相図を作成しました。
-            これに基づき、Fe-C-O系における内核形成の組成条件について制約を設けました。また、炭素の固体-液体分配係数が、
-            圧力や液体中の酸素量に影響されず一定であることを発見しました。この発見は、内核の物性に対する理解を深めるものです。</p>
-        <p>さらに、既存研究に基づくFe-C-O-S-Si系の計算において、内核が形成され得るかどうかを評価し、
-            コア中の水素の役割の重要性についても指摘しました。</p>
-        <p>詳細については、以下の原論文をぜひご覧ください。</p>
-        <br>
-        <p>Melting experiments on Fe-C-O to 200 GPa: liquidus phase constraints on core composition
-        <a href="https://doi.org/10.7185/geochemlet.2218"> https://doi.org/10.7185/geochemlet.2218 </a></p>
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.12.17</span><span class="news-tag">Publication</span></div>
+                <h3 class="news-title">主著論文がEPSLで出版されました</h3>
+                <div class="news-body">
+                    <p>主著論文がEarth and Planetary Science Lettersにて出版されました。</p>
+                    <p>近年の火星探査(InSight)により、火星のコアはこれまで考えられていたよりも密度が低く、
+                    硫黄などの軽元素を大量に(15 wt%以上)含んでいることが明らかになりました。しかし、これほど硫黄に富んだ環境で、火星中心部(約40 GPa)
+                    においてどのような物質が安定に存在するのか、その状態図は未解明のままでした。</p>
+                    <p>この系は、Fe3S、Fe2S、Fe12S7、Fe3S2といった多数の中間化合物が存在し、極めて複雑です。
+                    そこで本研究では、マルチアンビル装置を用いて高圧下で均質な出発物質(Fe2SやFe3S2)を予め合成し、
+                    それをダイヤモンドアンビルセルで火星コア条件まで加圧加熱することで、高圧下の精密な相関係を明らかにしました。</p>
+                    <p>実験の結果、これまで議論されていたFe3S2という硫化物は、29 GPa以上では分解してしまうことが判明しました。
+                    その代わりに、Fe12S7という硫化物が、液体の鉄から直接晶出することが明らかになりました。これは、Fe12S7から内核の可能性を示唆します。</p>                   
+                    <div class="citation-box">
+                        <p>Sakai, F., Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 at the inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026.</p>
+                        <a href="https://doi.org/10.1016/j.epsl.2025.119785" target="_blank" class="btn-sm">論文を見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.10.03</span><span class="news-tag">Award</span></div>
+                <h3 class="news-title">AIRAPT-29にて、Student Poster Awardを受賞しました</h3>
+                <div class="news-body has-image">
+                    <div class="news-image"><img src="image/AIRAPT_29.JPG" alt="AIRAPT-29"></div>
+                    <div class="news-text">
+                        <p>9月28日から10月3日にかけて行われたAIRAPT-29にて、AIRAPT-29 Student Poster Awardを受賞しました。
+                        本研究は、地球の外核・内核間の水素とケイ素の分配について、軽元素間の相互作用を明らかにする目的で実施しました。
+                        従来、鉄中の水素の定量は鉄の格子体積の膨張から推定するほかありませんでしたが、今回は、近年廣瀬研究室と北海道大学の坂本先生との共同研究で
+                        開発を進めているクライオSIMSを活用し、鉄中の水素を直接イメージングして分配係数を求めました。その点を評価して頂けたのだと思います。</p>
+                        <p>本研究を実施するにあたってお世話になった指導教員の廣瀬先生、北海道大学の坂本先生、圦本先生、
+                        そして今回となるクライオSIMSの技法を確立した田川さん、彦坂さん、幾田に特に感謝申し上げます。
+                        </p>                    
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.09.28</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">AIRAPT-29で発表しました</h3>
+                <div class="news-body">
+                    <p>9月28日から10月3日にかけて行われた29th International Conference on High Pressure Science and Technology (AIRAPT-29)に参加してきました。
+                        本国際会議は地球科学に限らず、物理や食品などのすべての高圧分野の研究者が世界中から集う集会となっています。
+                        今回はFe-Si-Hの固液分配と相図の決定について発表いたしました。本研究は北海道大学の坂本先生、圦本先生との共同研究となります。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.09.26</span><span class="news-tag">Publication</span></div>
+                <h3 class="news-title">共著論文がJGR:Solid Earthで出版されました</h3>
+                <div class="news-body">
+                    <p>研究室の元ポスドクのSuyuとの共著論文が出版されました。ダイヤモンドアンビルセル(DAC)とX線回折測定(XRD)から
+                        液体Fe-Hの密度測定を行いました。X線の散漫散乱から密度を測定するにあたり、Kuwayama et al. (2020 PRL)らが開発したS(Q)を延長する手法を用いることで、
+                        超高圧下における密度測定を可能としました。得られた密度をもとに液体Fe-Hの状態方程式を決定し、地球のコアにおける水素量について議論しています。
+                        本研究はSPring-8, BL10XUで行った実験となります。</p>
+                    <div class="citation-box">
+                        <p>Fu, S., Hirose, K., Yokoo, S., <strong>Sakai, F.</strong>, Oka, K.,  Hydrogen in the Earth's Outer Core From Density Measurements of Liquid Fe-H up to 102 GPa and 4,100 K. Journal of Geophysical Research: Solid Earth, 130(10), e2025JB031934, 2025.</p>
+                        <a href="https://doi.org/10.1029/2025JB031934" target="_blank" class="btn-sm">論文を見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.09.04</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">SpRUCシンポジウム2025に参加しました</h3>
+                <div class="news-body">
+                    <p>2025年9月4、5日に宮城県仙台で行われた特定放射光施設(SpRUC)シンポジウム2025に参加しました。SPring-8の大学院生提案型課題(長期型)で行っている、
+                        火星のコアに着目した液体FeSの密度決定に関してポスター発表を行いました。。</p>
+                    <div class="citation-box">
+                        <p>SpRUCシンポジウム2025</p>
+                        <a href="http://www.spring8.or.jp/ext/ja/spruc/sprucsymposium2025.html" target="_blank" class="text-link">詳細はこちら &rarr;</a></p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.08.14</span><span class="news-tag">Media</span></div>
+                <h3 class="news-title">SPring-8 NEWSに紹介されました</h3>
+                <div class="news-body">
+                    <p>SPring-8の広報誌にて、"SPring-8で研究する学生"として紹介されました。<br>
+                    <div class="citation-box">
+                            <a href="http://www.spring8.or.jp/ja/news_publications/publications/news/no_120/#students" target="_blank" class="text-link">記事を読む &rarr;</a></p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.07.14</span><span class="news-tag">Award</span></div>
+                <h3 class="news-title">JpGU2025学生発表優秀賞を受賞しました</h3>
+                <div class="news-body">
+                    <p>2025年5月25日から30日に千葉県で開催されたJpGU2025で発表した内容が学生優秀発表賞を受賞しました。
+                        共著者の皆様、審査に携わってくださった皆様に心より感謝申し上げます。</p>
+                    <div class="citation-box">
+                       <p></p> (参考)　日本地球惑星科学連合2025年大会 学生優秀発表賞</p>
+                        <a href="https://www.jpgu.org/ospa/2025meeting/#sectionS" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.05.30</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">JpGU2025で口頭発表を行いました</h3>
+                <div class="news-body">
+                    <p>2025年5月25日から30日にかけて千葉県で開催された国際学会「Japan Geoscience Union Meeting 2025（JpGU2025）」に参加し、口頭発表を行いました。
+                        発表では、XRD測定から液体FeSの密度を測定する研究を発表しました。
+                        得られた液体FeSの圧力-温度-密度関係をもとに状態方程式をアップデートし、
+                        火星のコアの密度を説明するためには先行研究で推定されているよりも多くの硫黄が必要であることを指摘しました。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2025.02.25</span><span class="news-tag">Publication</span></div>
+                <h3 class="news-title">共著論文がPRLで出版され、Editors’ Suggestionに選出されました</h3>
+                <div class="news-body">
+                    <p>研究室の後輩・竹澤君との共著論文が、Physical Review Lettersに掲載され、重要な成果として「Editors’ Suggestion」に選ばれるとともに、「Synopsis」にて解説されました。
+                        さらに、本論文の内容が当該号の表紙として採用されました。</p>
+                        
+                    <p>本論文では、5万〜54万気圧の条件下で鉄(Fe)とヘリウム(He)の反応を、格子体積の膨張を通して報告しています。
+                        さらに台湾・中央研究院のHsu教授、北海道大学の坂本准教授および三輪招聘教員との共同研究により、以下の成果を得ました。</p>
+                        <p>・第一原理計算を用いてFeHe化合物が動的に安定であることを確認</p>
+                        <p>・クライオSIMSを用いて鉄中のHeの直接測定</p>
+                        <p>本研究では、鉄とヘリウムが形成する全く新しい化合物を、実験・理論計算・質量分析の三分野のコラボレーションによって
+                        証明しました。
+                        特に興味深いのは、fcc構造のFe-He化合物において、Heが四面体サイトに侵入することが確認した点です。
+                        これは、Fe-H合金でHが八面体サイトに侵入する場合と対照的であり、重要な知見となります。
+                        </p>
+                    <p>また、DAC試料の金属中の貴ガス測定は非常に難易度が高い技術でした。鉄は常圧化ではbcc構造を取り、貴ガスを放出してしまいます。
+                        この貴ガスの放出を抑えるためには、極低温での測定、クライオSIMSによる測定が不可欠でした。
+                        本測定のために測定技術の開発と調整を行ってくださった
+                        坂本先生と三輪先生には大変感謝しています。</p>
+
+                    <p>詳細は、以下の原論文やプレスリリース・解説記事をぜひご覧ください。</p>
+                    
+                    <div class="citation-box">
+                        <p>Takezawa, H., Hsu, H., Hirose, K., <strong>Sakai, F.</strong>, et al., Formation of Iron-Helium Compounds under High Pressure. <i>Phys. Rev. Lett.</i> 134, 084101, 2025.</p>
+                        <a href="https://doi.org/10.1103/PhysRevLett.134.084101" target="_blank" class="btn-sm">論文を見る &rarr;</a>
+                        <p>東京大学プレスリリース：<a href= "https://www.s.u-tokyo.ac.jp/ja/press/10669/">https://www.s.u-tokyo.ac.jp/ja/press/10669/ </a></p>
+                        <p>北海道プレスリリース：<a href= "https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf">https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf</a></p>
+                        <p>Synopsis：<a href= "https://physics.aps.org/articles/v18/s22">https://physics.aps.org/articles/v18/s22 </a></p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+        <div class="year-toggle" onclick="toggleYear('year-2024')">2024年 <span>+</span></div>
+        <div id="year-2024" class="year-archive" style="display: none;">
+            
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.12.10</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">AGU24に参加しました</h3>
+                <div class="news-body">
+                    <p>2024年12月09日から13日にワシントンD.C.で開催されたAGU24のannual meetingに参加し、ポスター発表を行いました。
+                        発表内容は、X線回折実験による、FeS液体密度の測定です。多くの方に興味を持って頂けたうえ、実りのある議論をすることができました。。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.09-12</span><span class="news-tag">Research Stay</span></div>
+                <h3 class="news-title">パリ地球物理学研究所(IPGP)に滞在しました</h3>
+                <div class="news-body">
+                    <p>2024年9月から11月末までの3か月間、パリ地球物理学研究所(IPGP)に訪問します。
+                        Caracas先生のもとで、機械学習ポテンシャルを用いた第一原理計算について勉強します。。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.07.12</span><span class="news-tag">Award</span></div>
+                <h3 class="news-title">JpGU2024学生発表優秀賞を受賞しました</h3>
+                <div class="news-body">
+                    <p>2024年5月26日から31日に千葉県で開催された「日本地球惑星科学連合大会 2024（JpGU2024）」
+                        で発表した内容が学生優秀発表賞を受賞しました。審査に携わってくださった皆様に心より感謝申し上げます。</p>
+
+                    <div class="citation-box">
+                       <p></p> (参考)　日本地球惑星科学連合2024年大会 学生優秀発表賞</p>
+                        <a href="https://www.jpgu.org/ospa/2024meeting/#sectionS" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.05.29</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">JpGU2024で発表しました</h3>
+                <div class="news-body">
+                    <p>2024年5月26日から31日に千葉県で開催された国際学会「Japan Geoscience Union Meeting 2024（JpGU2024）」に参加し、口頭発表を行いました。
+                        発表では、Fe3S2とFe2Sの融解実験を通してFe-FeS系の相図を決定し、
+                        その相図をもとに、火星のコアにおいてFe12S7 からなる内核が結晶化する可能性について議論しました。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.05.20</span><span class="news-tag">Preprint</span></div>
+                <h3 class="news-title">共著論文がarXivに公開されました</h3>
+                <div class="news-body">
+                    <p>研究室の後輩である竹澤君との共著論文がarXivにアップロードされました。
+                        本論文では、8万〜40万気圧の条件下でFeとHeが反応することを、格子体積の膨張を通して報告しています。
+                        特に注目すべき点は、Fe-He化合物が常圧に回収可能であることが確認されたことで、これはHe吸蔵合金としての応用可能性を示しています。
+                        さらに、第一原理計算により、FeHe化合物が動的に安定であることも確認しました。
+                        この際、fcc構造のFe-He化合物においてHeは四面体サイトに侵入することが確認されました。
+                        これは、Fe-H合金でHが八面体サイトに侵入する場合と対照的であり、興味深い結果です。
+                        詳細については、以下の原論文をぜひご覧ください。</p>
+                    <div class="citation-box">
+                        <a href="https://doi.org/10.48550/arXiv.2405.11810" target="_blank" class="btn-sm">arXivを見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2024.05.16</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">EPOE2024 (Paris) に参加しました</h3>
+                <div class="news-body">
+                <p>2024年5月13日から17日にフランス・パリで開催された
+                    「Earth and Planets Origin and Evolution Workshops 2024」に参加し、ポスター発表を行いました。
+                    このワークショップでは、惑星形成から地球内部の構造、さらには惑星探査まで、幅広い分野にわたる発表があり、
+                    さまざまな最新の研究に触れることができました。
+                    私はこれまで、他分野で発表される研究結果をそのまま受け入れてしまいがちでしたが、
+                    今回のワークショップでは質疑応答が特に活発であり、
+                    各研究が実際にどのように受け止められているのかを直接感じることができました。</p>                
+                </div>
+            </article>
+
+        </div>
+
+        <div class="year-toggle" onclick="toggleYear('year-2023')">2023年 <span>+</span></div>
+        <div id="year-2023" class="year-archive" style="display: none;">
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.12.11-15</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">AGU23 (San Francisco) に参加しました</h3>
+                <div class="news-body">
+                    <p>2023年12月11日から15日にアメリカ・サンフランシスコで開催された
+                        「American Geophysical Union Annual Meeting（AGU23）」に参加し、口頭発表を行いました。
+                        発表では、Fe3S2およびFe12S7の安定領域を決定し、さらにFe12S7の状態方程式を導出しました。
+                        また、このFe12S7の密度データを基に、火星のコアにおいてFe12S7が結晶化する可能性についても議論しました。
+                        詳しい内容については、ぜひ発表予稿をご覧ください。</p>
+                    <p>なお、今回の学会参加にあたり、日本高圧力学会の「学生海外発表奨励金」の支援をいただきました。
+                        この場を借りて、ご支援いただいた日本高圧力学会に深く感謝申し上げます。</p>
+                    <div class="citation-box">
+                       <p></p> (参考)　日本高圧力学会 学生海外発表奨励金</p>
+                        <a href="https://www.highpressure.jp/abroad.html" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.11.05</span><span class="news-tag">Publication</span></div>
+                <h3 class="news-title">主著論文がEPSLで出版されました</h3>
+                <div class="news-body">
+                    <p>Fe-Si-S系の固液分配係数と軽元素間の相互作用に関する論文が出版されました。</p>
+                    <p>本研究では、Fe-Si-S試料を用いた高温高圧融解実験を約200万気圧まで行い、SiとSの固液分配係数を求めました。
+                        これは地球の外核（液体）と内核（固体）の間での軽元素の分配を模擬したもので、重要な知見を提供しています。            
+                        本研究の結果、液体中にSiが存在するとSの分配係数が減少し、逆にSが存在するとSiの分配係数が増加することがわかりました。
+                        このことは、内核への軽元素分配を考える際に、軽元素同士の相互作用を考慮する必要があることを示唆しています。
+                        従来はSの固液分配係数が0.8とされており、内核がSに富むと考えられていました。
+                        しかし、今回の研究で示された軽元素間の相互作用を考慮すると、外核中にSiが含まれる場合、
+                        内核にSが含まれない可能性があることが示唆されます。
+                        さらに本研究では、固液分配係数に基づき、外核と内核の物性を同時に説明できる組成のペアも推定しました。
+                        詳しい内容については、ぜひ以下の原論文をご覧ください！</p>
+                    <div class="citation-box">
+                        <p>Sakai, F., Hirose, K., Morard, G., Partitioning of silicon and sulfur... <i>Earth Planet. Sci. Lett.</i>, 624, 118449, 2023.</p>
+                        <a href="https://doi.org/10.1016/j.epsl.2023.118449" target="_blank" class="btn-sm">論文を見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.10.18-20</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">台湾でのワークショップで発表しました</h3>
+                <div class="news-body">
+                    <p>台北・中央研究院にて開催されたワークショップ"From Disks to Planets: Formation and Early Evolutionにて、地球コア組成の制約について講演しました。</p>
+                        <div class="citation-box">
+                        <p>タイトル: Inner core crystallization constrains the core composition</p>
+                        <p>概要：地球のコアの密度は純鉄よりも小さく、このことからコアには軽元素が含まれていると考えられています。
+                            従来、外核の密度欠損を説明するためにコア中の軽元素量が推定されてきましたが、
+                            本研究では、これまでの制約条件に加え、リキダス相関係と固液分配係数を活用することで、
+                            内核の密度欠損についても新たな制約条件を設けることが可能となりました。
+                            本発表では、これらの手法に基づき、どの程度まで軽元素の組成に対する制約が厳密に行えるかについて議論しました。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.10.01</span><span class="news-tag">Proposal</span></div>
+                <h3 class="news-title">SPring-8の大学院生提案型課題(長期)が採用されました</h3>
+                <div class="news-body">
+                    <p>大学院生提案型課題（長期型）がSPring-8で採用されました！
+                        さらに、この採用に伴い、高輝度光科学研究センターからJASRI奨励研究生の称号をいただくことになりました。
+                        博士課程の期間中、BL10XUでのシフトタイムもいただけたので、
+                        しっかりと成果を出せるように実験に取り組みたいと思います。これからの実験がとても楽しみです！</p>
+                    <div class="citation-box">
+                       <p></p> (参考)　SPring-8 大学院生提案型課題（長期型）</p>
+                        <a href="http://www.spring8.or.jp/ja/students/budding/" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.03.12-14</span><span class="news-tag">Outreach</span></div>
+                <h3 class="news-title">第15回地学オリンピックの学生チューターを務めました</h3>
+                <div class="news-body">
+                    <p>茨城県つくば市で開催された第15回地学オリンピック本選で学生チューターを務めました。
+                        地学オリンピックは中学生から高校生の国際地学オリンピックの代表選考も兼ねています。
+                        私が参加した10年前と比べても、参加者のレベルが著しく向上しており、地学教育の進歩を実感しました。
+                        今回選考された日本代表の中には高校の後輩もおり、国際地学オリンピックでの活躍を強く期待しています。</p>
+                    <div class="citation-box">
+                        (参考)　地学オリンピック
+                        <a href="https://jeso.jp/index.html" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2023.03.07</span><span class="news-tag">Award</span></div>
+                <h3 class="news-title">東京大学理学系研究科研究奨励賞を受賞しました</h3>
+                <div class="news-body">
+                    <p>修士課程中に行ったダイヤモンドアンビルセルを用いたさまざまな研究が評価されたようです。
+                        来年から博士課程に進学しますが、賞に泥を塗らないよう、気を引き締めて頑張りたいと思います。</p>
+                    <div class="citation-box">
+                        <a href="https://warp.ndl.go.jp/info:ndljp/pid/12972979/www.s.u-tokyo.ac.jp/ja/awards/encouragement/R4.html" target="_blank" class="btn-sm">詳細はこちら &rarr;</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="year-toggle" onclick="toggleYear('year-2022')">2022年以前 <span>+</span></div>
+        <div id="year-2022" class="year-archive" style="display: none;">
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.12.13</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">第63回高圧討論会で発表しました</h3>
+                <div class="news-body">
+                    <p>立命館大学で開催された第63回高圧討論会でポスター発表を行いました。発表のタイトルと概要は以下の通りです。</p>
+                    <p>初めてのポスター発表を経験させていただき、多くの方々にお話を聞いていただきました。ありがとうございました。</p>
+                    <div class="citation-box">
+                        <p>タイトル 1P58: Fe3S2 組成のコア圧力下その場 XRD 測定と Fe12S7の状態方程式の決定</p>
+                        <p>概要：マルチアンビル装置で合成したFe3S2をDACに詰め、高圧その場X線回折実験を行いました。
+                            その結果、Fe3S2がFe12S7とFeSに分解することを突き止めました。
+                            また、Fe12S7の状態方程式を決定し、火星コアでの挙動について議論しました。
+                            これらの議論に基づき、火星コアに内核が存在する可能性を指摘しました。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.09.28</span><span class="news-tag">Grant</span></div>
+                <h3 class="news-title">日本学術振興会特別研究員(DC1)に内定しました</h3>
+                <div class="news-body">
+                    <p>学術振興会（JSPS）の特別研究員（DC1）に採用内定しました。来年度からD1として3年間の採用となります。
+                        私の研究テーマは、火星の内部構造の解明です。
+                        支援をいただけることになったので、気を引き締めて頑張りたいと思います。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.08.22-26</span><span class="news-tag">NEWS</span></div>
+                <h3 class="news-title">第10回対称性・群論トレーニングコースに参加しました</h3>
+                <div class="news-body">
+                    <p>日本結晶学会主催の第10回対称性・群論トレーニングコースに参加しました。
+                        このトレーニングコースでは、鉱物学において非常に重要な結晶学の基礎について、
+                        つくばのKEKでネスポロ・マッシモ先生による集中講義が5日間にわたって行われました。
+                        演習を通じて、点群や格子の取り方についてより深く理解することができました。
+                        今後の研究において、このコースで得た知見を活かしていきたいと思います。</p>
+                    <div class="citation-box">
+                        <p>(参照)　対称性・群論トレーニングコース</p>
+                        <a href="http://pfwww.kek.jp/trainingcourse/index.html" target="_blank" class="btn-sm">サイトを閲覧する &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.08.03</span><span class="news-tag">Outreach</span></div>
+                <h3 class="news-title">東大理学部オープンキャンパスで講演しました</h3>
+                <div class="news-body">
+                    <p>「地球の"コア"な話～高圧実験で見る地球の深部～」というタイトルで高校生向けに講演を行いました。</p>
+                        
+                    <div class="citation-box">
+                        <a href="https://www.youtube.com/watch?v=4LzvgWiZ6rw&t=1s" target="_blank" class="btn-sm">動画を見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.07.18</span><span class="news-tag">Presentation</span></div>
+                <h3 class="news-title">IMA2022 (Lyon) で発表しました</h3>
+                <div class="news-body">
+                    <p>フランス・リヨンで開催された国際鉱物学会にて、Fe-Si-S系の固液分配について口頭発表を行いました。</p>
+                    <p>私の研究では、Fe-Si-S試料における固液分配をコア圧力下で実施し、
+                        液体中のシリコン（Si）と硫黄（S）の相互作用が固液分配係数に与える影響を調査しました。</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-meta"><span class="news-date">2022.05.17</span><span class="news-tag">Publication</span></div>
+                <h3 class="news-title">主著論文がGeochemical Perspectives Lettersで出版されました</h3>
+                <div class="news-body">
+                    <p>Fe-C-O系の高圧融解実験と地球内核組成への制約に関する論文が出版されました。</p>
+                    <p>本論文では、Fe-C-O試料の融解実験を約200GPaまで行い、Fe-C-O系における鉄に富んだ領域の高圧相図を作成しました。
+                        これに基づき、Fe-C-O系における内核形成の組成条件について制約を設けました。また、炭素の固体-液体分配係数が、
+                        圧力や液体中の酸素量に影響されず一定であることを発見しました。この発見は、内核の物性に対する理解を深めるものです。</p>
+                    <p>さらに、既存研究に基づくFe-C-O-S-Si系の計算において、内核が形成され得るかどうかを評価し、
+                        コア中の水素の役割の重要性についても指摘しました。</p>
+                    <div class="citation-box">
+                        <p><strong>Sakai, F.</strong>, Hirose, K., Umemoto, K., Melting experiments on Fe-C-O to 200 GPa... <i>Geochem. Persp. Let.</i>, 22, 1–4, 2022.</p>
+                        <a href="https://doi.org/10.7185/geochemlet.2218" target="_blank" class="btn-sm">論文を見る &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>お問い合わせはこちらまで。</p>
-        <p>Email: f.sakai@eps.s.u-tokyo.ac.jp</p>
+        <p>研究に関するお問い合わせは下記までお願いいたします。</p>
+        <p class="email">E-mail: f.sakai[at]eps.s.u-tokyo.ac.jp</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Fumiya Sakai</p>
     </footer>
+
+    <script>
+        function toggleYear(yearId) {
+            var content = document.getElementById(yearId);
+            var header = content.previousElementSibling; // クリックされたボタン要素
+            
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                header.classList.add("active");
+                header.querySelector("span").textContent = "-"; // プラスをマイナスに
+            } else {
+                content.style.display = "none";
+                header.classList.remove("active");
+                header.querySelector("span").textContent = "+"; // マイナスをプラスに
+            }
+        }
+    </script>
 
 </body>
 </html>
