@@ -2,6 +2,8 @@
 
 // ニュースを動的に追加したい場合、JavaScriptで内容を更新できます。
 const recentNews = [
+    { date: "2026年3月24日", content:"博士課程を修了しました。"},
+    { date: "2026年3月10日", content:"東京大学 理学系研究科研究奨励賞(博士)を受賞しました。"},
     { date: "2025年12月17日", content:"主著論文がEPSLで出版されました。"},
     { date: "2025年10月3日", content:"AIRAPT-29でStudent Poster Awardを受賞しました。"},
     { date: "2025年9月27日", content:"共著論文がJGR:Solid Earthで出版されました。"},
