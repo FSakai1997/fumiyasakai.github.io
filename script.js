@@ -2,6 +2,7 @@
 
 // ニュースを動的に追加したい場合、JavaScriptで内容を更新できます。
 const recentNews = [
+    { date: "2026年6月22日", content:"主著論文がJGR:Planetsで出版されました。"},
     { date: "2026年6月17日", content:"SPring-8大学院生課題優秀研究賞を受賞しました。"},
     { date: "2026年5月27日", content:"JpGU2026で口頭発表を行いました"},
     { date: "2026年4月13日", content:"共著論文がGCAで出版されました。"},
@@ -13,7 +14,6 @@ const recentNews = [
     { date: "2025年8月14日", content:"SPring-8 NEWSに紹介されました。"},
     { date: "2025年7月14日", content:"JpGU2025学生優秀発表賞を受賞しました。"},
     { date: "2025年5月30日", content:"JpGU2025で発表しました。"},
-    { date: "2025年2月25日", content: "共著論文がPRLで出版されました。" },
 ];
 
 const newsList = document.getElementById("recent-news");
