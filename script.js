@@ -2,8 +2,8 @@
 
 // ニュースを動的に追加したい場合、JavaScriptで内容を更新できます。
 const recentNews = [
-    { date: "2026年6月22日", content:"共著論文がGPLで出版されました。"},
-    { date: "2026年6月17日", content:"SP長期課題の解説記事が出版されました。"},
+    { date: "2026年9月16日", content:"共著論文がGPLで出版されました。"},
+    { date: "2026年9月15日", content:"SP長期課題の解説記事が出版されました。"},
     { date: "2026年6月22日", content:"主著論文がJGR:Planetsで出版されました。"},
     { date: "2026年6月17日", content:"SPring-8大学院生課題優秀研究賞を受賞しました。"},
     { date: "2026年5月27日", content:"JpGU2026で口頭発表を行いました。"},
