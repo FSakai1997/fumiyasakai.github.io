@@ -1,6 +1,14 @@
 """移行の忠実性を検証する。
 
-news.html / cv.html と data/*.json を突き合わせ、失われた情報がないことを確認する。
+移行前の news.html / cv.html と data/*.json を突き合わせ、
+失われた情報がないことを確認する。
+
+比較元は tools/fixtures/ に固定保存した移行前のHTMLである。
+公開中の news.html / cv.html は描画型に書き換わっており、
+記事本文を持たないため比較には使えない。この固定データがある限り、
+データ構造をあとから変更しても「元の内容を失っていないか」を
+いつでも確かめられる。
+
 このスクリプトが通らない限り、移行は完了していない。
 判定を緩めて通すことは、データを失ったまま先へ進むことと同じであり、許されない。
 """
@@ -11,6 +19,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+FIXTURES = ROOT / "tools" / "fixtures"
 
 TAG_NORMALIZATION = {"Publications": "Publication", "Awards": "Award", "NEWS": "News"}
 
@@ -121,7 +130,7 @@ def verify_meta(blocks: list[str], items: list[dict]) -> list[str]:
 
 
 def verify_news() -> tuple[list[str], int]:
-    html = (ROOT / "news.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "news.original.html").read_text(encoding="utf-8")
     data = json.loads((ROOT / "data" / "news.json").read_text(encoding="utf-8"))
     items = data["items"]
     blocks = article_blocks(html)
@@ -190,7 +199,7 @@ def cv_parts(data: dict) -> list[str]:
 
 
 def verify_cv() -> tuple[list[str], int, int]:
-    html = (ROOT / "cv.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "cv.original.html").read_text(encoding="utf-8")
     data = json.loads((ROOT / "data" / "cv.json").read_text(encoding="utf-8"))
     body = cv_container(html)
     failures: list[str] = []

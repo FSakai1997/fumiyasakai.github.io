@@ -73,6 +73,10 @@
         <p>&copy; 2024 Fumiya Sakai</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module">
+        import { mountNews, renderRecent } from "./js/render-news.js";
+        import { currentLang } from "./js/i18n.js";
+        mountNews(document.getElementById("recent-news"), renderRecent, currentLang());
+    </script>
 </body>
 </html>

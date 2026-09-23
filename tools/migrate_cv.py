@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+FIXTURES = ROOT / "tools" / "fixtures"
 
 SECTION = re.compile(r'<section class="cv-section">(.*?)</section>', re.S)
 HEADING = re.compile(r'<h2 class="cv-heading">(.*?)</h2>', re.S)
@@ -69,7 +70,7 @@ def parse_profile(body: str) -> dict:
 
 
 def main() -> int:
-    html = (ROOT / "cv.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "cv.original.html").read_text(encoding="utf-8")
     start = html.index('<div class="container cv-container"')
     end = html.index('<section id="contact"', start)
     container = html[start:end]

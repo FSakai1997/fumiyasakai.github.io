@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+FIXTURES = ROOT / "tools" / "fixtures"
 
 # タグの表記揺れを多数派に寄せる。
 TAG_NORMALIZATION = {
@@ -211,7 +212,7 @@ def parse_article(block: str) -> dict:
 
 
 def main() -> int:
-    html = (ROOT / "news.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "news.original.html").read_text(encoding="utf-8")
     blocks = article_blocks(html)
     print(f"{len(blocks)} 件の記事を検出しました")
 

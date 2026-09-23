@@ -12,7 +12,7 @@ PYTHONIOENCODING=utf-8 python tools/verify_migration.py
 
 echo
 echo "=== 単体テスト ==="
-node --test tools/tests/format.test.mjs tools/tests/i18n.test.mjs
+node --test "tools/tests/*.test.mjs"
 
 echo
 echo "すべての検証が通りました。"
