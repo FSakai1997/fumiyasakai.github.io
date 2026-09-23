@@ -224,12 +224,73 @@ def verify_cv() -> tuple[list[str], int, int]:
 
 
 # --------------------------------------------------------------------------
+# 研究紹介
+# --------------------------------------------------------------------------
+
+
+def research_container(html: str) -> str:
+    """research.html のうち、研究テーマ本体だけを切り出す。"""
+    start = html.index('<div class="container">')
+    start = html.index(">", start) + 1
+    end = html.index('<section id="contact"', start)
+    return html[start:end].rstrip().removesuffix("</div>")
+
+
+def research_parts(data: dict) -> list[str]:
+    """research.json の全内容を、比較用の文字列の並びにする。"""
+    parts = []
+    for topic in data["topics"]:
+        parts.append(topic["heading"]["ja"])
+        parts.append(topic["body"]["ja"])
+        image = topic.get("image") or {}
+        caption = (image.get("caption") or {}).get("ja", "")
+        parts.append(caption)
+    return parts
+
+
+def verify_research() -> tuple[list[str], int]:
+    html = (FIXTURES / "research.original.html.txt").read_text(encoding="utf-8")
+    data = json.loads((ROOT / "data" / "research.json").read_text(encoding="utf-8"))
+    body = research_container(html)
+    failures: list[str] = []
+
+    want_topics = len(re.findall(r'<section class="research-topic', body))
+    if want_topics != len(data["topics"]):
+        failures.append(
+            f"テーマ数不一致: research.html={want_topics} research.json={len(data['topics'])}"
+        )
+
+    want_headings = [visible_text(h) for h in re.findall(r"<h2>(.*?)</h2>", body, re.S)]
+    got_headings = [visible_text(t["heading"]["ja"]) for t in data["topics"]]
+    if want_headings != got_headings:
+        failures.append(f"見出し不一致\n    期待={want_headings}\n    実際={got_headings}")
+
+    parts = research_parts(data)
+    want_text = visible_text(body)
+    got_text = visible_text("".join(parts))
+    if want_text != got_text:
+        failures.append("研究紹介の本文テキスト不一致 " + first_difference(want_text, got_text))
+
+    missing = hrefs(body) - hrefs("".join(parts))
+    if missing:
+        failures.append(f"研究紹介で失われたリンク {sorted(missing)}")
+
+    want_imgs = img_srcs(body)
+    got_imgs = {t["image"]["src"] for t in data["topics"] if t.get("image")}
+    if want_imgs - got_imgs:
+        failures.append(f"研究紹介で失われた画像 {sorted(want_imgs - got_imgs)}")
+
+    return failures, len(data["topics"])
+
+
+# --------------------------------------------------------------------------
 
 
 def main() -> int:
     news_failures, news_count = verify_news()
     cv_failures, cv_sections, cv_entries = verify_cv()
-    failures = news_failures + cv_failures
+    research_failures, research_topics = verify_research()
+    failures = news_failures + cv_failures + research_failures
 
     if failures:
         print(f"検証失敗: {len(failures)} 件\n")
@@ -239,6 +300,7 @@ def main() -> int:
 
     print(f"検証成功: ニュース {news_count} 件でテキスト・リンク・画像・日付・タグが一致しました")
     print(f"検証成功: CV {cv_sections} セクション / {cv_entries} エントリで見出し・テキスト・リンクが一致しました")
+    print(f"検証成功: 研究紹介 {research_topics} テーマで見出し・テキスト・リンク・画像が一致しました")
     return 0
 
 
