@@ -815,3 +815,7 @@ code {
 .modal-body { flex: 1; overflow-y: auto; min-height: 0; }
 
 .modal-body .media-panel { padding: 16px; }
+
+/* CV編集の項目移動ボタン */
+
+.row-move { display: flex; gap: 3px; }
