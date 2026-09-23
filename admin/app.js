@@ -27,6 +27,7 @@ const expiryWarning = document.getElementById("expiry-warning");
 /** タブ名 → そのタブを初期化する関数。読み込みは初回表示まで遅らせる。 */
 const PANEL_LOADERS = {
   news: () => import("./news-editor.js").then((m) => m.initNewsEditor),
+  research: () => import("./research-editor.js").then((m) => m.initResearchEditor),
   cv: () => import("./cv-editor.js").then((m) => m.initCvEditor),
   media: () => import("./media.js").then((m) => m.initMedia),
 };

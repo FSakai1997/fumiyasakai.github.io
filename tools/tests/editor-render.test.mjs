@@ -180,3 +180,151 @@ test("Profile フォームが描画でき、箇条書きを行単位で編集で
   lines.fire("input");
   assert.deepEqual(profile.ja.lines, ["一行目", "二行目"], "空行が残っている");
 });
+
+/**
+ * 入力イベントまで発火させる検証。
+ *
+ * 描画だけを見るテストは「描画はできるが、入力しても保存されない」状態を
+ * 見逃す。実際、入力欄の生成を共通化した際にこの状態を作ってしまい、
+ * 描画だけのテストは全部通ってしまった。
+ */
+
+test("CVの日付欄に入力すると entry.date に反映される", () => {
+  const section = structuredClone(cv.sections.find((s) => s.type === "dated"));
+  const root = container();
+  renderSectionForm(root, section, { lang: "ja", onLangSwitch: noop, touch: noop, refresh: noop });
+
+  const dateInput = fieldControl(root, "日付");
+  assert.ok(dateInput, "日付欄がない");
+  dateInput.value = "2027.04";
+  dateInput.fire("input");
+  assert.equal(section.entries[0].date, "2027.04");
+});
+
+test("CVの本文欄に入力すると entry.ja に反映される", () => {
+  const section = structuredClone(cv.sections.find((s) => s.type === "dated"));
+  const root = container();
+  renderSectionForm(root, section, { lang: "ja", onLangSwitch: noop, touch: noop, refresh: noop });
+
+  const area = root.find("textarea");
+  assert.ok(area, "本文欄がない");
+  area.value = "書き換えました";
+  area.fire("input");
+  assert.equal(section.entries[0].ja, "書き換えました");
+});
+
+test("CVの英語タブで入力しても日本語を壊さない", () => {
+  const original = cv.sections.find((s) => s.type === "numbered");
+  const section = structuredClone(original);
+  const root = container();
+  renderSectionForm(root, section, { lang: "en", onLangSwitch: noop, touch: noop, refresh: noop });
+
+  const area = root.find("textarea");
+  area.value = "English entry.";
+  area.fire("input");
+  assert.equal(section.entries[0].en, "English entry.");
+  assert.equal(section.entries[0].ja, original.entries[0].ja, "日本語が上書きされている");
+});
+
+test("CVの氏名欄に入力すると profile に反映される", () => {
+  const profile = structuredClone(cv.profile);
+  const root = container();
+  renderProfileForm(root, profile, { lang: "ja", onLangSwitch: noop, touch: noop });
+
+  const nameInput = fieldControl(root, "氏名");
+  assert.ok(nameInput, "氏名欄がない");
+  nameInput.value = "坂井 郁哉";
+  nameInput.fire("input");
+  assert.equal(profile.ja.name, "坂井 郁哉");
+});
+
+// --------------------------------------------------------------------------
+// 研究紹介
+// --------------------------------------------------------------------------
+
+const { renderTopicForm, blankTopic } = await import("../../admin/research-form.js");
+const research = load("research.json");
+
+test("研究テーマの編集フォームが例外なく描画できる", () => {
+  for (const topic of research.topics) {
+    const root = container();
+    assert.doesNotThrow(
+      () =>
+        renderTopicForm(root, structuredClone(topic), {
+          lang: "ja",
+          onLangSwitch: noop,
+          onChange: noop,
+          onPickImage: noop,
+        }),
+      `${topic.id} の描画で例外`,
+    );
+    assert.ok(root.children.length > 0);
+  }
+});
+
+test("研究テーマの見出しに入力すると heading.ja に反映される", () => {
+  const topic = structuredClone(research.topics[0]);
+  const root = container();
+  renderTopicForm(root, topic, { lang: "ja", onLangSwitch: noop, onChange: noop, onPickImage: noop });
+
+  const headingInput = fieldControl(root, "見出し");
+  assert.ok(headingInput, "見出し欄がない");
+  headingInput.value = "新しい見出し<br>2行目";
+  headingInput.fire("input");
+  assert.equal(topic.heading.ja, "新しい見出し<br>2行目");
+});
+
+test("研究テーマの本文に入力すると body.ja に反映される", () => {
+  const topic = structuredClone(research.topics[0]);
+  const root = container();
+  renderTopicForm(root, topic, { lang: "ja", onLangSwitch: noop, onChange: noop, onPickImage: noop });
+
+  const bodyArea = root.find("textarea");
+  assert.ok(bodyArea, "本文欄がない");
+  bodyArea.value = "<p>書き換えました</p>";
+  bodyArea.fire("input");
+  assert.equal(topic.body.ja, "<p>書き換えました</p>");
+});
+
+test("研究テーマの英語タブで入力しても日本語を壊さない", () => {
+  const topic = structuredClone(research.topics[0]);
+  const root = container();
+  renderTopicForm(root, topic, { lang: "en", onLangSwitch: noop, onChange: noop, onPickImage: noop });
+
+  const bodyArea = root.find("textarea");
+  bodyArea.value = "<p>English body.</p>";
+  bodyArea.fire("input");
+  assert.equal(topic.body.en, "<p>English body.</p>");
+  assert.equal(topic.body.ja, research.topics[0].body.ja, "日本語が上書きされている");
+});
+
+test("キャプションは言語別、代替テキストは共通", () => {
+  const topic = structuredClone(research.topics[0]);
+  const root = container();
+  renderTopicForm(root, topic, { lang: "en", onLangSwitch: noop, onChange: noop, onPickImage: noop });
+
+  fieldControl(root, "キャプション").value = "Phase diagram";
+  fieldControl(root, "キャプション").fire("input");
+  assert.equal(topic.image.caption.en, "Phase diagram");
+  assert.equal(topic.image.caption.ja, research.topics[0].image.caption.ja);
+
+  fieldControl(root, "代替テキスト").value = "shared alt";
+  fieldControl(root, "代替テキスト").fire("input");
+  assert.equal(topic.image.alt, "shared alt", "代替テキストは言語で分けない");
+});
+
+test("画像のないテーマでも描画でき、追加ボタンが出る", () => {
+  const topic = structuredClone(research.topics[0]);
+  topic.image = null;
+  const root = container();
+  renderTopicForm(root, topic, { lang: "ja", onLangSwitch: noop, onChange: noop, onPickImage: noop });
+  assert.ok(root.findAll("button").some((b) => b.text.includes("画像を追加")));
+});
+
+test("新しいテーマの雛形は日英の器を持つ", () => {
+  const topic = blankTopic();
+  assert.deepEqual(Object.keys(topic.heading).sort(), ["en", "ja"]);
+  assert.deepEqual(Object.keys(topic.body).sort(), ["en", "ja"]);
+  assert.deepEqual(Object.keys(topic.image.caption).sort(), ["en", "ja"]);
+  assert.match(topic.id, /^topic-/);
+});

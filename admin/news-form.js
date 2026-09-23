@@ -6,6 +6,7 @@
  */
 
 import { h, replace, field } from "./dom.js";
+import { textInput, textArea, langTabs } from "./controls.js";
 import { citationRow, blankCitation } from "./citation-editor.js";
 
 /** 本文で使えるタグの早見表。毎回調べずに済むよう、フォームの下に置く。 */
@@ -16,45 +17,6 @@ const TAG_CHEATSHEET = [
   ["太字（自分の名前）", "<strong>…</strong>"],
   ["リンク", '<a href="URL" target="_blank">表示文字</a>'],
 ];
-
-function textInput(value, onInput, options = {}) {
-  return h("input", {
-    type: options.type ?? "text",
-    class: `input${options.mono ? " mono" : ""}`,
-    value: value ?? "",
-    placeholder: options.placeholder ?? "",
-    oninput: (event) => onInput(event.target.value),
-  });
-}
-
-function textArea(value, onInput, rows = 14) {
-  return h("textarea", {
-    class: "input textarea",
-    rows,
-    value: value ?? "",
-    spellcheck: false,
-    oninput: (event) => onInput(event.target.value),
-  });
-}
-
-/** 言語の切替タブ。日本語と English を行き来する。 */
-function langTabs(current, onSwitch) {
-  return h(
-    "div",
-    { class: "lang-tabs" },
-    ...["ja", "en"].map((lang) =>
-      h(
-        "button",
-        {
-          type: "button",
-          class: `lang-tab${lang === current ? " on" : ""}`,
-          onclick: () => onSwitch(lang),
-        },
-        lang === "ja" ? "日本語" : "English",
-      ),
-    ),
-  );
-}
 
 /**
  * フォームを描画する。
@@ -142,11 +104,15 @@ export function renderNewsForm(container, item, options) {
 
     field(
       "本文（HTML）",
-      textArea(item[lang]?.body, (value) => {
-        item[lang] = item[lang] ?? { title: "", body: "" };
-        item[lang].body = value;
-        changed();
-      }),
+      textArea(
+        item[lang]?.body,
+        (value) => {
+          item[lang] = item[lang] ?? { title: "", body: "" };
+          item[lang].body = value;
+          changed();
+        },
+        { rows: 14 },
+      ),
     ),
 
     h(

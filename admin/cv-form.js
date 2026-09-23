@@ -7,48 +7,7 @@
  */
 
 import { h, replace, field } from "./dom.js";
-
-function textArea(value, rows, placeholder, onInput) {
-  return h("textarea", {
-    class: "input textarea",
-    rows,
-    value: value ?? "",
-    placeholder,
-    spellcheck: false,
-    oninput: (event) => onInput(event.target.value),
-  });
-}
-
-function textInput(value, placeholder, onInput, mono = false) {
-  return h("input", {
-    type: "text",
-    class: `input${mono ? " mono" : ""}`,
-    value: value ?? "",
-    placeholder,
-    oninput: (event) => onInput(event.target.value),
-  });
-}
-
-const EN_PLACEHOLDER = "(未入力なら日本語を表示します)";
-
-/** 言語の切替タブ。 */
-export function langTabs(current, onSwitch) {
-  return h(
-    "div",
-    { class: "lang-tabs" },
-    ...["ja", "en"].map((code) =>
-      h(
-        "button",
-        {
-          type: "button",
-          class: `lang-tab${code === current ? " on" : ""}`,
-          onclick: () => onSwitch(code),
-        },
-        code === "ja" ? "日本語" : "English",
-      ),
-    ),
-  );
-}
+import { textInput, textArea, langTabs, EN_PLACEHOLDER } from "./controls.js";
 
 function moveButton(label, title, enabled, onClick) {
   return h("button", { class: "row-button", title, disabled: !enabled, textContent: label, onclick: onClick });
@@ -95,20 +54,23 @@ function entryRow(section, index, lang, touch, refresh) {
     section.type === "dated"
       ? field(
           "日付",
-          textInput(entry.date, "2026.04 - 2029.03", (value) => {
-            entry.date = value;
-            touch();
-          }, true),
+          textInput(
+            entry.date,
+            (value) => {
+              entry.date = value;
+              touch();
+            },
+            { placeholder: "2026.04 - 2029.03", mono: true },
+          ),
         )
       : null,
     textArea(
       entry[lang],
-      section.type === "numbered" ? 4 : 2,
-      lang === "en" ? EN_PLACEHOLDER : "",
       (value) => {
         entry[lang] = value;
         touch();
       },
+      { rows: section.type === "numbered" ? 4 : 2, placeholder: lang === "en" ? EN_PLACEHOLDER : "" },
     ),
   );
 }
@@ -146,17 +108,25 @@ export function renderProfileForm(container, profile, options) {
     h("div", { class: "section-head" }, h("span", {}, "Profile"), langTabs(lang, onLangSwitch)),
     field(
       "氏名",
-      textInput(box.name, lang === "en" ? EN_PLACEHOLDER : "坂井 郁哉 (Fumiya Sakai)", (value) => {
-        box.name = value;
-        touch();
-      }),
+      textInput(
+        box.name,
+        (value) => {
+          box.name = value;
+          touch();
+        },
+        { placeholder: lang === "en" ? EN_PLACEHOLDER : "坂井 郁哉 (Fumiya Sakai)" },
+      ),
     ),
     field(
       "箇条書き（1行に1項目）",
-      textArea((box.lines ?? []).join("\n"), 5, "", (value) => {
-        box.lines = value.split("\n").filter((line) => line.trim() !== "");
-        touch();
-      }),
+      textArea(
+        (box.lines ?? []).join("\n"),
+        (value) => {
+          box.lines = value.split("\n").filter((line) => line.trim() !== "");
+          touch();
+        },
+        { rows: 5 },
+      ),
     ),
   );
 }
