@@ -231,10 +231,16 @@ export function renderNewsForm(container, item, options) {
     h("div", { class: "section-head" }, h("span", {}, "引用ボックス")),
 
     ...(item.citations ?? []).map((citation, index) =>
-      citationRow(citation, index, changed, () => {
-        item.citations.splice(index, 1);
-        changed({ rerender: true });
-      }),
+      citationRow(
+        citation,
+        index,
+        changed,
+        () => {
+          item.citations.splice(index, 1);
+          changed({ rerender: true });
+        },
+        lang,
+      ),
     ),
 
     h(

@@ -22,6 +22,18 @@ export function formatJapanese(iso) {
   return `${m[1]}年${Number(m[2])}月${Number(m[3])}日`;
 }
 
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/** "2026-09-16" -> "16 September 2026"（英語ページの表記） */
+export function formatEnglish(iso) {
+  const m = ISO_DATE.exec(iso ?? "");
+  if (!m) return iso ?? "";
+  return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
+}
+
 /** 並べ替えと年分類に使う西暦。解釈できなければ 0。 */
 export function yearOf(iso) {
   const m = ISO_DATE.exec(iso ?? "");
@@ -33,9 +45,14 @@ export function archiveDate(item) {
   return item?.dateLabel || formatDotted(item?.date);
 }
 
-/** トップページに表示する日付。期間表記はそのまま出す。 */
-export function recentDate(item) {
-  return item?.dateLabel || formatJapanese(item?.date);
+/**
+ * トップページに表示する日付。期間表記はそのまま出す。
+ * 言語によって表記を変える。日付は読み手の言語で書くべきものなので、
+ * 記事の翻訳状況ではなくページの言語に従う。
+ */
+export function recentDate(item, lang = "ja") {
+  if (item?.dateLabel) return item.dateLabel;
+  return lang === "en" ? formatEnglish(item?.date) : formatJapanese(item?.date);
 }
 
 /**

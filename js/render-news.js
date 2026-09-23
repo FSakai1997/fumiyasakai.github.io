@@ -51,15 +51,16 @@ function imageHtml(image, lang) {
   return `<div class="news-image"${divStyle}><img src="${src}" alt="${alt}"${imgStyle}></div>`;
 }
 
-function citationsHtml(citations) {
+function citationsHtml(citations, lang) {
   if (!citations || citations.length === 0) return "";
   const rows = citations
     .map((citation) => {
-      const text = citation.text ? `<p>${citation.text}</p>` : "";
+      const body = pick(citation.text, lang);
+      const text = body ? `<p>${body}</p>` : "";
       const links = (citation.links ?? [])
         .map(
           (link) =>
-            `<a href="${escapeAttribute(link.url)}" target="_blank" class="btn-sm">${link.label}</a>`,
+            `<a href="${escapeAttribute(link.url)}" target="_blank" class="btn-sm">${pick(link.label, lang)}</a>`,
         )
         .join("\n                        ");
       return text + (links ? `\n                        ${links}` : "");
@@ -82,7 +83,7 @@ export function newsCardHtml(item, lang) {
     `    <div class="${bodyClass}">`,
     imageHtml(image, lang),
     pickBody(item, lang),
-    citationsHtml(item.citations),
+    citationsHtml(item.citations, lang),
     "    </div>",
     "</article>",
   ]
@@ -142,7 +143,7 @@ export function renderRecent(container, items, lang) {
   if (!container) return;
   container.innerHTML = items
     .slice(0, RECENT_NEWS_LIMIT)
-    .map((item) => `<li>${escapeText(recentDate(item))} - ${escapeText(pickTitle(item, lang))}</li>`)
+    .map((item) => `<li>${escapeText(recentDate(item, lang))} - ${escapeText(pickTitle(item, lang))}</li>`)
     .join("\n");
 }
 

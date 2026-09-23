@@ -6,8 +6,9 @@
  */
 
 import { h } from "./dom.js";
+import { EN_PLACEHOLDER } from "./controls.js";
 
-const DEFAULT_LINK_LABEL = "論文を見る &rarr;";
+const DEFAULT_LINK_LABEL = { ja: "論文を見る &rarr;", en: "View the paper &rarr;" };
 
 function input(value, placeholder, onInput, mono = false) {
   return h("input", {
@@ -19,12 +20,13 @@ function input(value, placeholder, onInput, mono = false) {
   });
 }
 
-function linkRow(link, links, index, changed) {
+function linkRow(link, links, index, changed, lang) {
   return h(
     "div",
     { class: "link-row" },
-    input(link.label, DEFAULT_LINK_LABEL, (value) => {
-      link.label = value;
+    input(link.label?.[lang], lang === "en" ? EN_PLACEHOLDER : DEFAULT_LINK_LABEL.ja, (value) => {
+      link.label = link.label ?? { ja: "", en: "" };
+      link.label[lang] = value;
       changed();
     }),
     input(
@@ -53,7 +55,7 @@ function linkRow(link, links, index, changed) {
 }
 
 /** 引用1件分の編集欄。 */
-export function citationRow(citation, index, changed, onRemove) {
+export function citationRow(citation, index, changed, onRemove, lang = "ja") {
   const links = citation.links ?? (citation.links = []);
 
   return h(
@@ -68,22 +70,24 @@ export function citationRow(citation, index, changed, onRemove) {
     h("textarea", {
       class: "input textarea",
       rows: 3,
-      value: citation.text ?? "",
+      value: citation.text?.[lang] ?? "",
       spellcheck: false,
-      placeholder: "Sakai, F., Hirose, K., …, <i>誌名</i>, 巻, 頁, 年.",
+      placeholder:
+        lang === "en" ? EN_PLACEHOLDER : "Sakai, F., Hirose, K., …, <i>誌名</i>, 巻, 頁, 年.",
       oninput: (event) => {
-        citation.text = event.target.value;
+        citation.text = citation.text ?? { ja: "", en: "" };
+        citation.text[lang] = event.target.value;
         changed();
       },
     }),
-    ...links.map((link, linkIndex) => linkRow(link, links, linkIndex, changed)),
+    ...links.map((link, linkIndex) => linkRow(link, links, linkIndex, changed, lang)),
     h(
       "button",
       {
         type: "button",
         class: "button ghost small",
         onclick: () => {
-          links.push({ label: DEFAULT_LINK_LABEL, url: "" });
+          links.push({ label: { ...DEFAULT_LINK_LABEL }, url: "" });
           changed({ rerender: true });
         },
       },
@@ -94,5 +98,8 @@ export function citationRow(citation, index, changed, onRemove) {
 
 /** 空の引用をつくる。 */
 export function blankCitation() {
-  return { text: "", links: [{ label: DEFAULT_LINK_LABEL, url: "" }] };
+  return {
+    text: { ja: "", en: "" },
+    links: [{ label: { ...DEFAULT_LINK_LABEL }, url: "" }],
+  };
 }

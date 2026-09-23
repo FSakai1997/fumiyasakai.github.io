@@ -133,15 +133,15 @@ def parse_citations(inner: str) -> list[dict]:
     pos = 0
     for link in CITATION_LINK.finditer(inner):
         for text in _citation_texts(inner[pos : link.start()]):
-            citations.append({"text": text, "links": []})
+            citations.append({"text": {"ja": text, "en": ""}, "links": []})
         if not citations:
             citations.append({"text": "", "links": []})
         citations[-1]["links"].append(
-            {"label": link.group(2).strip(), "url": attr(link.group(1), "href")}
+            {"label": {"ja": link.group(2).strip(), "en": ""}, "url": attr(link.group(1), "href")}
         )
         pos = link.end()
     for text in _citation_texts(inner[pos:]):
-        citations.append({"text": text, "links": []})
+        citations.append({"text": {"ja": text, "en": ""}, "links": []})
     return citations
 
 

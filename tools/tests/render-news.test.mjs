@@ -103,9 +103,24 @@ test("トップページは最新10件を和式の日付で出す", () => {
 });
 
 test("英語指定でも、未翻訳の記事は日本語で表示される", () => {
+  // 実データの翻訳が進むとこの性質は観測できなくなるので、
+  // 英語を空にした記事を作って確かめる。
+  const untranslated = items.slice(0, 3).map((item) => ({
+    ...structuredClone(item),
+    en: { title: "", body: "" },
+  }));
   const container = fakeContainer();
-  renderRecent(container, items, "en");
-  assert.ok(container.innerHTML.includes("共著論文がGPLで出版されました"));
+  renderRecent(container, untranslated, "en");
+  assert.ok(container.innerHTML.includes(untranslated[0].ja.title));
+});
+
+test("英訳済みの記事は英語で表示される", () => {
+  const translated = items.filter((item) => item.en?.title);
+  assert.ok(translated.length > 0, "英訳済みの記事が1件もない");
+  const container = fakeContainer();
+  renderRecent(container, translated, "en");
+  assert.ok(container.innerHTML.includes(translated[0].en.title));
+  assert.ok(!container.innerHTML.includes(translated[0].ja.title));
 });
 
 test("タイトルに含まれる < > & はエスケープされる", () => {
@@ -114,4 +129,59 @@ test("タイトルに含まれる < > & はエスケープされる", () => {
     "ja",
   );
   assert.ok(html.includes("a&lt;b&gt;&amp;c"));
+});
+
+/**
+ * 引用ボックスの言語対応。
+ *
+ * 引用の本文とリンクのラベルは、当初ひとつの文字列として持っていた。
+ * そのため英語ページでも「論文を見る →」のような日本語のボタンが出ていた。
+ * 画像の代替テキストと同じ種類の見落とし。
+ */
+
+test("引用のリンクラベルは言語別に持つ", () => {
+  const item = items.find((i) => (i.citations ?? []).length > 0);
+  const link = item.citations[0].links[0];
+  assert.equal(typeof link.label, "object", "ラベルが文字列のままになっている");
+  assert.ok("ja" in link.label && "en" in link.label);
+});
+
+test("引用の本文は言語別に持つ", () => {
+  const item = items.find((i) => (i.citations ?? []).length > 0);
+  assert.equal(typeof item.citations[0].text, "object", "引用本文が文字列のままになっている");
+});
+
+test("英訳済みの記事は、引用ボックスにも日本語が残らない", () => {
+  // 未訳の記事の引用は日本語のままでよい。英訳を入れた記事だけを対象にする。
+  // 翻訳が進むほど検査対象が増え、翻訳の途中でも落ちない。
+  const translated = items.filter((item) => item.en?.title && (item.citations ?? []).length > 0);
+  assert.ok(translated.length > 0, "引用を持つ英訳済みの記事が1件もない");
+
+  for (const item of translated) {
+    const boxes =
+      newsCardHtml(item, "en").match(/<div class="citation-box">[\s\S]*?<\/div>/g) ?? [];
+    const japanese = boxes.join("").match(/[\u3040-\u30ff\u4e00-\u9fff]+/g) ?? [];
+    assert.deepEqual(
+      japanese,
+      [],
+      `${item.date} の英語引用に日本語が残っている: ${japanese.slice(0, 5)}`,
+    );
+  }
+});
+
+test("リンクのラベルは全記事で英訳済み（英語ページにボタンの日本語を残さない）", () => {
+  const missing = [];
+  for (const item of items) {
+    for (const citation of item.citations ?? []) {
+      for (const link of citation.links ?? []) {
+        if (!link.label?.en?.trim()) missing.push(`${item.date}: ${link.label?.ja}`);
+      }
+    }
+  }
+  assert.deepEqual(missing, []);
+});
+
+test("日本語ページの引用ボックスは日本語のまま", () => {
+  const html = items.map((item) => newsCardHtml(item, "ja")).join("\n");
+  assert.ok(html.includes("論文を見る"), "日本語のラベルが失われている");
 });

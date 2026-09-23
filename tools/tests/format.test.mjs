@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   formatDotted,
   formatJapanese,
+  formatEnglish,
   archiveDate,
   recentDate,
   yearOf,
@@ -90,4 +91,27 @@ test("groupByYear は元の並び順をグループ内で保つ", () => {
 
 test("groupByYear は空配列を受け取っても落ちない", () => {
   assert.deepEqual(groupByYear([], 2022), []);
+});
+
+test("formatEnglish は英語の日付表記を返す", () => {
+  assert.equal(formatEnglish("2026-09-16"), "16 September 2026");
+  assert.equal(formatEnglish("2026-06-22"), "22 June 2026");
+  assert.equal(formatEnglish("2026-03-04"), "4 March 2026");
+});
+
+test("formatEnglish も不正な値はそのまま返す", () => {
+  assert.equal(formatEnglish("おかしな値"), "おかしな値");
+  assert.equal(formatEnglish(""), "");
+});
+
+test("recentDate は言語に応じて日付表記を切り替える", () => {
+  const item = { date: "2026-09-16", dateLabel: "" };
+  assert.equal(recentDate(item, "ja"), "2026年9月16日");
+  assert.equal(recentDate(item, "en"), "16 September 2026");
+});
+
+test("期間表記は言語によらず原文のまま出す", () => {
+  const ranged = { date: "2023-12-11", dateLabel: "2023.12.11-15" };
+  assert.equal(recentDate(ranged, "ja"), "2023.12.11-15");
+  assert.equal(recentDate(ranged, "en"), "2023.12.11-15");
 });

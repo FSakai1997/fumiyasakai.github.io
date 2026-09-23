@@ -93,9 +93,9 @@ def json_article_html(item: dict) -> str:
     if image:
         parts.append(f'<img src="{image["src"]}" alt="{image.get("alt", "")}">')
     for citation in item.get("citations", []):
-        parts.append(citation["text"])
+        parts.append(citation["text"]["ja"])
         for link in citation.get("links", []):
-            parts.append(f'<a href="{link["url"]}">{link["label"]}</a>')
+            parts.append(f'<a href="{link["url"]}">{link["label"]["ja"]}</a>')
     return "".join(parts)
 
 

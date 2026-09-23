@@ -12,16 +12,22 @@
         "body": "<p>研究室の後輩であった竹下君との共著論文が<i>Geochemical Perspectives Letters</i>にて出版されました。</p>\n                <p>従来より、FeとHの反応は常圧化ではほとんど見られず、3万気圧を境にFeH化合物が形成すると理解されていました。\n                    これに基づき、2~3万気圧のごく狭い範囲でFe-Hの融点が急降下するとされていました。一方で、2万気圧以下の実験はほとんどなされておらず、この融点の急降下は確認されていませんでした。\n                    本研究ではそこで、直径が800μmという、ダイヤモンドアンビルセルとしては大きなキュレットサイズを持つアンビルを使用して、数万気圧という比較的低い圧力下でFe-H系の融解実験を行い、実際のFe-H系の融点の変化を捉えました。\n                    これらの実験から、実際のFeとHの反応はより低圧下で徐々に進行しており、従来推定されていたものと比べると比較的連続的な変化であることが確認されました。\n                </p>\n                <p>\n                    これは、従来の推定よりも定圧化から鉄と水素の反応が開始していることを示唆します。これまで、月などの小さい天体では、コアの分離圧力が低いために鉄中の水素の溶解度がごく低く、ほとんど水素はコアに分配されないとされていました。\n                    ところが、本研究のように低圧力下から水素が鉄に融解すると考えると、月のような小さな天体においてもコア中の水素量は議論する必要があります。\n                </p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "A co-authored paper has been published in GPL",
+        "body": "<p>A paper co-authored with Jun Takeshita, a junior colleague in my former laboratory, has been published in <i>Geochemical Perspectives Letters</i>.</p>\n<p>Iron and hydrogen had been thought to barely react at ambient pressure, with FeH compounds forming only above about 3 GPa. On that basis, the melting temperature of the Fe-H system was expected to drop sharply within the narrow range of 2-3 GPa. Experiments below 2 GPa, however, had hardly been carried out, and this sharp drop had never been confirmed. We therefore performed melting experiments on the Fe-H system at the relatively modest pressures of a few GPa, using anvils with an unusually large culet diameter of 800 &mu;m for a diamond anvil cell, and tracked how the melting temperature actually changes. The experiments show that iron and hydrogen in fact begin to react at lower pressures and do so gradually, giving a more continuous change than previously assumed.</p>\n<p>This means that the reaction between iron and hydrogen starts at lower pressures than earlier estimates suggested. Small bodies such as the Moon have been assumed to incorporate almost no hydrogen into their cores, because the low pressure of core separation implies a very low solubility of hydrogen in iron. If hydrogen dissolves into iron from low pressures, as our results indicate, the hydrogen content of the cores of small bodies such as the Moon needs to be reconsidered.</p>"
       },
       "image": null,
       "citations": [
         {
-          "text": "Takeshita, J., Hirose, K., Fu, S., <strong>Sakai, F.</strong>, Hikosaka, K., Fe-H melting curve below 3 GPa: implications for hydrogen in the lunar core, <i>Geochemical Perspectives Letters</i>, 41, 53-57, 2026.",
+          "text": {
+            "ja": "Takeshita, J., Hirose, K., Fu, S., <strong>Sakai, F.</strong>, Hikosaka, K., Fe-H melting curve below 3 GPa: implications for hydrogen in the lunar core, <i>Geochemical Perspectives Letters</i>, 41, 53-57, 2026.",
+            "en": "Takeshita, J., Hirose, K., Fu, S., <strong>Sakai, F.</strong>, Hikosaka, K., Fe-H melting curve below 3 GPa: implications for hydrogen in the lunar core, <i>Geochemical Perspectives Letters</i>, 41, 53-57, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.7185/geochemlet.2633"
             }
           ]
@@ -39,20 +45,29 @@
         "body": "<p>昨年度まで2年半ほどSPring-8 BL10XUで遂行しておりました大学院生提案型課題(長期型)の研究成果解説記事が<i>SPring-8/SACLA/NanoTerasu 利用者情報</i>にて出版されました。</p>\n                <p>近年の火星探査によって内部構造に関して直接的な観測データが得られるようになってきましたが、それらの限られた観測データから深部の構造を決定するのは依然として困難であることが知られています。\n                    この課題に対し高圧実験に基づく物質科学的な制約を取り入れることは、内部構造モデルに物理化学的な根拠を与える必要不可欠なアプローチです。\n                    しかし、物質科学的な課題として、火星コアに対応する温度・圧力・組成領域における高圧実験研究が不足していることが知られています。\n                    そこで本研究では、高温高圧下その場X線回折測定により、液体FeSの密度とFe-FeS系のリキダス相関係を決定しました。\n                    本研究により、観測から推定される火星コアの密度を説明するには17 wt%以上の多量の硫黄が必要であり、\n                    その条件下では、液体コアよりも硫黄に富む固体相Fe12S7が、火星の中心部で内核として結晶化しうることが明らかになりました。\n                    硫黄に富む内核が形成されることで、磁場を生み出す原動力である組成対流が妨げられ、現在の火星が全球的な磁場を持たないことを説明できる可能性があります。\n                </p>\n                <p>\n                    詳しい内容は、是非以下の現論文をご覧ください。また、こちらの研究成果に基づき、SPring-8大学院生課題優秀研究賞を受賞しました。\n                </p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "An article on my SPring-8 long-term project has been published",
+        "body": "<p>An article describing the results of the graduate student proposal (long-term type) that I carried out at SPring-8 BL10XU for about two and a half years, through the last fiscal year, has been published in <i>SPring-8/SACLA/NanoTerasu Users Information</i>.</p>\n<p>Recent missions to Mars have begun to provide direct observational constraints on its interior, yet determining the deep structure from such limited data remains difficult. Adding material-science constraints from high-pressure experiments is an essential way to give interior models a physical and chemical basis. On the materials side, however, high-pressure experiments in the temperature, pressure and composition range relevant to the Martian core have been scarce. In this work I determined the density of liquid FeS and the liquidus phase relations of the Fe-FeS system by in situ X-ray diffraction at high pressure and temperature. The results show that explaining the observed density of the Martian core requires at least 17 wt% sulfur, and that under those conditions the solid phase Fe12S7, which is richer in sulfur than the liquid core, can crystallize as an inner core at the center of Mars. The growth of such a sulfur-rich inner core would suppress the compositional convection that drives a dynamo, which may explain why Mars has no global magnetic field today.</p>\n<p>Please see the original papers below for details. This work also received the SPring-8 Excellent Research Award for Graduate Student Proposals.</p>"
       },
       "image": null,
       "citations": [
         {
-          "text": "<strong>坂井 郁哉</strong>, 高圧その場 X 線回折実験による火星コアの構造解明, <i>SPring-8/SACLA/NanoTerasu 利用者情報</i>, 2(3), 136-141, 2026.",
+          "text": {
+            "ja": "<strong>坂井 郁哉</strong>, 高圧その場 X 線回折実験による火星コアの構造解明, <i>SPring-8/SACLA/NanoTerasu 利用者情報</i>, 2(3), 136-141, 2026.",
+            "en": "<strong>Sakai, F.</strong>, Revealing the structure of the Martian core by in situ high-pressure X-ray diffraction experiments, <i>SPring-8/SACLA/NanoTerasu Users Information</i>, 2(3), 136-141, 2026. (in Japanese)"
+          },
           "links": [
             {
-              "label": "解説記事を見る &rarr;",
+              "label": {
+                "ja": "解説記事を見る &rarr;",
+                "en": "View the article &rarr;"
+              },
               "url": "https://ssn-info.jasri.jp/volume-02-no3/1602/"
             },
             {
-              "label": "大学院生提案型課題の事後評価を見る &rarr;",
+              "label": {
+                "ja": "大学院生提案型課題の事後評価を見る &rarr;",
+                "en": "View the post-project review &rarr;"
+              },
               "url": "https://ssn-info.jasri.jp/volume-02-no3/1569/"
             }
           ]
@@ -70,16 +85,22 @@
         "body": "<p>主著論文が<i>Journal of Geophysical Research: Planets</i>にて出版されました。</p>\n                <p>近年の火星探査（InSight）により、火星コアの密度は純鉄のみから予想される値よりも小さいことが明らかになっています。\n                    この密度低下を引き起こす元素は「軽元素」と呼ばれ、火星コアでは硫黄がその有力候補と考えられています。\n                </p>\n                <p>しかし、火星コアにどの程度の硫黄が含まれているのかについては、いまだ十分には明らかになっていません。\n                    これまでの推定は主により低圧下での実験や理論計算に基づいていましたが、\n                    火星コア条件では鉄の磁性の影響を適切に考慮する必要があり、不確実性が残されていました。\n                    そのため、実際の火星コア圧力・温度条件下での実験が求められていました。\n                    </p>\n                <p>本研究では、レーザー加熱式ダイヤモンドアンビルセルと放射光X線回折を用い、火星コア条件下における液体FeSの密度測定に成功しました。\n                    その結果、従来用いられてきた液体FeSの状態方程式は密度を過小評価していたことが示されました。\n                </p>\n                <p>さらに、本研究で得られた状態方程式を用いて火星コアの硫黄量を推定しました。\n                    その結果、溶融シリケイト層（MSL）の存在を考慮した高温の火星コアでは、コア中に17 wt%以上の硫黄が必要であることが分かりました。\n                </p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "A first-author paper has been published in JGR: Planets",
+        "body": "<p>A first-author paper has been published in <i>Journal of Geophysical Research: Planets</i>.</p>\n<p>Recent exploration of Mars by InSight has shown that the density of the Martian core is lower than would be expected for pure iron. The elements responsible for this deficit are called light elements, and sulfur is regarded as the leading candidate for the Martian core.</p>\n<p>How much sulfur the Martian core actually contains, however, is still not well constrained. Earlier estimates relied mainly on experiments at lower pressures and on theoretical calculations, and uncertainty remained because the magnetic properties of iron must be treated properly at Martian core conditions. Experiments at the actual pressure and temperature of the Martian core were therefore needed.</p>\n<p>In this study we measured the density of liquid FeS under Martian core conditions using a laser-heated diamond anvil cell combined with synchrotron X-ray diffraction. The results show that the equation of state for liquid FeS used until now underestimates the density.</p>\n<p>Using the new equation of state, we then estimated the sulfur content of the Martian core. For a hot core consistent with the presence of a molten silicate layer (MSL), at least 17 wt% sulfur is required.</p>"
       },
       "image": null,
       "citations": [
         {
-          "text": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026.",
+          "text": {
+            "ja": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026.",
+            "en": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1029/2025JE009596"
             }
           ]
@@ -97,8 +118,8 @@
         "body": "<p>SPring-8大学院生課題優秀研究賞を受賞しました。<br>\n                本賞は、昨年度まで実施されていた「大学院生提案型課題（長期）」における研究成果を対象に授与されたものです。 \n                <br>\n                <br>\n                私は2023年10月から2025年2月にかけて、高圧X線回折ビームラインBL10XUを利用し、火星コアの組成と構造に関する研究を行いました。\n                主な成果として、液体FeSの密度測定およびFe-FeS系の状態図決定を行い、火星コアの硫黄濃度を推定しました。\n                その結果、火星の中心部ではFe12S7からなる内核が形成されている可能性を示しました。<br>\n                <br>\n                このような軽元素に富む内核が形成される場合、内核成長に伴って外核最下部の液体は周囲よりも高密度となり、\n                地球とは異なりコア対流を抑制することが示唆されます。これは、現在の火星に全球規模の磁場が存在しないこととも整合的な結果です。\n                <br>\n                <br>\n                本研究成果を評価いただき、このたび受賞に至りました。関係者の皆様に心より感謝申し上げます。\n            </p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Received the SPring-8 Excellent Research Award for Graduate Student Proposals",
+        "body": "<p>I received the SPring-8 Excellent Research Award for Graduate Student Proposals.<br>\nThe award recognizes work carried out under the graduate student proposal (long-term type) programme, which ran through the last fiscal year.\n<br>\n<br>\nFrom October 2023 to February 2025 I used BL10XU, the high-pressure X-ray diffraction beamline, to study the composition and structure of the Martian core. The main results were measurements of the density of liquid FeS and the determination of the phase diagram of the Fe-FeS system, from which I estimated the sulfur content of the Martian core. These results indicate that an inner core made of Fe12S7 may have formed at the center of Mars.<br>\n<br>\nIf such a light-element-rich inner core forms, the liquid at the base of the outer core becomes denser than its surroundings as the inner core grows, which suggests that core convection is suppressed rather than driven, in contrast to the Earth. This is consistent with the absence of a global magnetic field on Mars today.<br>\n<br>\nI am grateful to everyone involved for recognizing this work.\n</p>"
       },
       "image": {
         "src": "image/SP_award_cut.JPG",
@@ -111,19 +132,31 @@
       },
       "citations": [
         {
-          "text": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026.",
+          "text": {
+            "ja": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026.",
+            "en": "<strong>Sakai, F.</strong>, Hirose, K., Yokoo, S, Fu, S., Measurements of Liquid FeS Density under Martian Core Conditions: Constraint on Core Density Profile, <i>Journal of Geophysical Research: Planets</i>, 131, e2025JE009596, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1029/2025JE009596"
             }
           ]
         },
         {
-          "text": "<strong>Sakai, F.</strong>, Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026.",
+          "text": {
+            "ja": "<strong>Sakai, F.</strong>, Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026.",
+            "en": "<strong>Sakai, F.</strong>, Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1016/j.epsl.2025.119785"
             }
           ]
@@ -141,8 +174,8 @@
         "body": "<p>2026年5月24日から30日にかけて千葉県で開催された国際学会「JpGU-AGU joint meeting 2026に参加し、口頭発表を行いました。\n                        発表では、以前IPGPに留学していた際に行った、機械学習ポテンシャルを用いたFe-Si-O系の分子動力学計算(MLMD)について発表しました。\n                        自身にとっては初めての理論系の研究でしたが、無事研究発表を行えるほど内容がまとまり安心しました。\n                        近年の機械学習の発展により、MLMDも地球深部科学において存在感を放つようになってきましたが、\n                        その一方で非物理的な結果が得られたとしてもそれに気づかない可能性があり、注意が必要な分野だと感じています。\n                        自分自身がその手法を用いた研究を行うことで、大変勉強になりました。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Gave an oral presentation at JpGU-AGU Joint Meeting 2026",
+        "body": "<p>I attended the JpGU-AGU Joint Meeting 2026, held in Chiba from 24 to 30 May 2026, and gave an oral presentation. I presented molecular dynamics simulations of the Fe-Si-O system using a machine-learning potential (MLMD), work I carried out during my stay at IPGP. This was my first project on the theoretical side, and I was relieved to have brought it far enough to present. With the recent progress in machine learning, MLMD has come to occupy a prominent place in deep Earth science. At the same time, unphysical results can go unnoticed, so the approach calls for care. Working with the method myself taught me a great deal.</p>"
       },
       "image": null,
       "citations": []
@@ -158,16 +191,22 @@
         "body": "<p>共著論文がGeochimica et Cosmochimica Actaにて出版されました。研究室の先輩でもある小澤さん(現兵庫県立大助教)らとの共著論文です。</p>\n                    <p>本研究では、SPring-8やKEKにおけるX線吸収分光(XAFS)やX線発光分光(XES)測定により、高圧下におけるケイ酸塩ガラス中のMn2+,Co2+,Ni2+,Mo6+の結合長や配位数の変化をまとめました。\n                    これらの局所的な状態変化は、地球深部における鉱物-シリケイトメルト間や金属-シリケイトメルト間の元素分配、さらには同位体分別に影響を与えると考えられています。</p>\n                    <p>坂井は本研究において、SPring-8 BL39XUおよびBL12XUにおいて行われたXAFS測定やXES測定を小澤さんと共に行いました。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "A co-authored paper has been published in GCA",
+        "body": "<p>A co-authored paper has been published in <i>Geochimica et Cosmochimica Acta</i>. It is joint work with Kenji Ozawa, a senior colleague in my former laboratory and now an assistant professor at the University of Hyogo, and others.</p>\n<p>Using X-ray absorption spectroscopy (XAFS) and X-ray emission spectroscopy (XES) at SPring-8 and KEK, the study documents how the bond lengths and coordination numbers of Mn2+, Co2+, Ni2+ and Mo6+ in silicate glasses change under high pressure. These local changes are thought to affect the partitioning of elements between minerals and silicate melts, and between metal and silicate melts, in the deep Earth, as well as isotopic fractionation.</p>\n<p>My contribution was to carry out the XAFS and XES measurements at SPring-8 BL39XU and BL12XU together with Dr. Ozawa.</p>"
       },
       "image": null,
       "citations": [
         {
-          "text": "Ozawa, K., Hirose, K., Takahashi, Y., <strong>Sakai, F.</strong>, Hiraoka, N., Ishii, H., Kawamura, N., Irifune, T., Pressure-induced changes in the coordination environments and spin states of manganese, cobalt, nickel, and molybdenum in basaltic glasses, <i>Geochimica et Cosmochimica Acta</i>, 421, 54-65, 2026.",
+          "text": {
+            "ja": "Ozawa, K., Hirose, K., Takahashi, Y., <strong>Sakai, F.</strong>, Hiraoka, N., Ishii, H., Kawamura, N., Irifune, T., Pressure-induced changes in the coordination environments and spin states of manganese, cobalt, nickel, and molybdenum in basaltic glasses, <i>Geochimica et Cosmochimica Acta</i>, 421, 54-65, 2026.",
+            "en": "Ozawa, K., Hirose, K., Takahashi, Y., <strong>Sakai, F.</strong>, Hiraoka, N., Ishii, H., Kawamura, N., Irifune, T., Pressure-induced changes in the coordination environments and spin states of manganese, cobalt, nickel, and molybdenum in basaltic glasses, <i>Geochimica et Cosmochimica Acta</i>, 421, 54-65, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1016/j.gca.2026.03.052"
             }
           ]
@@ -185,8 +224,8 @@
         "body": "<p>東京科学大学理学院　地球惑星科学系　太田研究室に、学振PDとして着任いたしました。</p>\n                <p>高圧下の物性測定で名高いこちらの研究室で、様々な技法を学んでいきたいと思います。</p>\n                <p>太田研の皆様、よろしくお願いいたします。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Joined the Ohta Laboratory at Institute of Science Tokyo as a JSPS Research Fellow (PD)",
+        "body": "<p>I have taken up a position as a JSPS Research Fellow (PD) in the Ohta Laboratory, Department of Earth and Planetary Sciences, School of Science, Institute of Science Tokyo.</p>\n<p>The laboratory is well known for measurements of physical properties under high pressure, and I look forward to learning a range of new techniques here.</p>\n<p>I am grateful to everyone in the Ohta Laboratory for welcoming me.</p>"
       },
       "image": null,
       "citations": []
@@ -202,8 +241,8 @@
         "body": "<p>東京大学大学院理学系研究科博士課程を修了いたしました。\n                <br>\n                <br>\n                振り返ると、小学校から続いてきた学生生活のうち9年間を東京大学で過ごし、\n                そのうち約6年間、廣瀬先生のもとで研究に取り組ませていただきました。\n                これまでの人生の中でも、最も充実した時間であったと感じています。\n                今後は、廣瀬研究室で培った技術や知識を基に、新しいことにこだわりながら地球科学の発展に貢献していきたいと思います。\n                <br>\n                <br>\n                博士課程への進学を後押ししてくださった家族や友人の皆様、そして長きにわたりご指導いただいた廣瀬先生ならびに研究室の皆様に、心より感謝申し上げます。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Completed my doctoral programme at the Graduate School of Science, The University of Tokyo",
+        "body": "<p>I have completed the doctoral programme at the Graduate School of Science, The University of Tokyo.\n<br>\n<br>\nLooking back, I spent nine of my student years at the University of Tokyo, about six of them doing research under Professor Hirose. It has been the most rewarding period of my life so far. Building on the techniques and knowledge I gained in the Hirose Laboratory, I hope to keep pursuing new questions and to contribute to the advancement of Earth science.\n<br>\n<br>\nI am deeply grateful to my family and friends, who encouraged me to pursue a doctorate, and to Professor Hirose and everyone in the laboratory for their long-standing guidance.</p>"
       },
       "image": {
         "src": "image/PhD.jpg",
@@ -226,16 +265,22 @@
         "body": "<p>博士課程にて行った研究が、理学系研究科研究奨励賞(博士)を受賞しました。ダイヤモンドアンビルセルを駆使して地球と火星のコア組成を制約し、\n                        それぞれの惑星の磁場進化に軽元素組成が大きく影響した可能性を議論しました。</p>\n\n                    <p>推薦してくださった地球惑星科学専攻の先生方、特に指導教員である廣瀬先生に感謝申し上げます。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Received the Research Encouragement Award (Doctoral), Graduate School of Science, The University of Tokyo",
+        "body": "<p>My doctoral research received the Research Encouragement Award (Doctoral) from the Graduate School of Science. Using the diamond anvil cell, I constrained the core compositions of the Earth and Mars, and discussed how the light-element composition may have strongly influenced the magnetic evolution of each planet.</p>\n<p>I thank the faculty of the Department of Earth and Planetary Science for nominating me, and in particular my supervisor, Professor Hirose.</p>"
       },
       "image": null,
       "citations": [
         {
-          "text": "",
+          "text": {
+            "ja": "",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://www.s.u-tokyo.ac.jp/ja/info/11086/"
             }
           ]
@@ -253,8 +298,8 @@
         "body": "<p>愛媛大学GRCで開催された第12回愛媛大学先進超高圧科学研究拠点(PRIUS)シンポジウムに参加しました。</p>\n                    <p>また、「X線回折測定による火星の外核・内核の組成推定」という題目で近年進めていた火星のコアに関する研究についても発表させていただきました。</p>"
       },
       "en": {
-        "title": "",
-        "body": ""
+        "title": "Presented at the 12th PRIUS Symposium",
+        "body": "<p>I attended the 12th Symposium of the Ehime University Research Center for Advanced Ultrahigh-Pressure Science (PRIUS), held at the Geodynamics Research Center, Ehime University.</p>\n<p>I also presented my recent work on the Martian core, under the title \"Estimating the compositions of the Martian outer and inner core from X-ray diffraction measurements\".</p>"
       },
       "image": null,
       "citations": []
@@ -276,10 +321,16 @@
       "image": null,
       "citations": [
         {
-          "text": "Sakai, F., Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 at the inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026.",
+          "text": {
+            "ja": "Sakai, F., Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 at the inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026.",
+            "en": "Sakai, F., Hirose, K., Melting phase relations in Fe-FeS under Martian core pressures: Crystallization of Fe12S7 at the inner core?, <i>Earth and Planetary Science Letters</i>, 675, 119785, 2026."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1016/j.epsl.2025.119785"
             }
           ]
@@ -344,10 +395,16 @@
       "image": null,
       "citations": [
         {
-          "text": "Fu, S., Hirose, K., Yokoo, S., <strong>Sakai, F.</strong>, Oka, K.,  Hydrogen in the Earth's Outer Core From Density Measurements of Liquid Fe-H up to 102 GPa and 4,100 K. Journal of Geophysical Research: Solid Earth, 130(10), e2025JB031934, 2025.",
+          "text": {
+            "ja": "Fu, S., Hirose, K., Yokoo, S., <strong>Sakai, F.</strong>, Oka, K.,  Hydrogen in the Earth's Outer Core From Density Measurements of Liquid Fe-H up to 102 GPa and 4,100 K. Journal of Geophysical Research: Solid Earth, 130(10), e2025JB031934, 2025.",
+            "en": "Fu, S., Hirose, K., Yokoo, S., <strong>Sakai, F.</strong>, Oka, K.,  Hydrogen in the Earth's Outer Core From Density Measurements of Liquid Fe-H up to 102 GPa and 4,100 K. Journal of Geophysical Research: Solid Earth, 130(10), e2025JB031934, 2025."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1029/2025JB031934"
             }
           ]
@@ -371,10 +428,16 @@
       "image": null,
       "citations": [
         {
-          "text": "SpRUCシンポジウム2025",
+          "text": {
+            "ja": "SpRUCシンポジウム2025",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "http://www.spring8.or.jp/ext/ja/spruc/sprucsymposium2025.html"
             }
           ]
@@ -398,10 +461,16 @@
       "image": null,
       "citations": [
         {
-          "text": "",
+          "text": {
+            "ja": "",
+            "en": ""
+          },
           "links": [
             {
-              "label": "記事を読む &rarr;",
+              "label": {
+                "ja": "記事を読む &rarr;",
+                "en": "Read the article &rarr;"
+              },
               "url": "http://www.spring8.or.jp/ja/news_publications/publications/news/no_120/#students"
             }
           ]
@@ -425,10 +494,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参考)　日本地球惑星科学連合2025年大会 学生優秀発表賞",
+          "text": {
+            "ja": "(参考)　日本地球惑星科学連合2025年大会 学生優秀発表賞",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://www.jpgu.org/ospa/2025meeting/#sectionS"
             }
           ]
@@ -469,37 +544,61 @@
       "image": null,
       "citations": [
         {
-          "text": "Takezawa, H., Hsu, H., Hirose, K., <strong>Sakai, F.</strong>, et al., Formation of Iron-Helium Compounds under High Pressure. <i>Phys. Rev. Lett.</i> 134, 084101, 2025.",
+          "text": {
+            "ja": "Takezawa, H., Hsu, H., Hirose, K., <strong>Sakai, F.</strong>, et al., Formation of Iron-Helium Compounds under High Pressure. <i>Phys. Rev. Lett.</i> 134, 084101, 2025.",
+            "en": "Takezawa, H., Hsu, H., Hirose, K., <strong>Sakai, F.</strong>, et al., Formation of Iron-Helium Compounds under High Pressure. <i>Phys. Rev. Lett.</i> 134, 084101, 2025."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1103/PhysRevLett.134.084101"
             }
           ]
         },
         {
-          "text": "東京大学プレスリリース：",
+          "text": {
+            "ja": "東京大学プレスリリース：",
+            "en": ""
+          },
           "links": [
             {
-              "label": "https://www.s.u-tokyo.ac.jp/ja/press/10669/",
+              "label": {
+                "ja": "https://www.s.u-tokyo.ac.jp/ja/press/10669/",
+                "en": "https://www.s.u-tokyo.ac.jp/ja/press/10669/"
+              },
               "url": ""
             }
           ]
         },
         {
-          "text": "北海道プレスリリース：",
+          "text": {
+            "ja": "北海道プレスリリース：",
+            "en": ""
+          },
           "links": [
             {
-              "label": "https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf",
+              "label": {
+                "ja": "https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf",
+                "en": "https://www.hokudai.ac.jp/news/pdf/250228_pr3.pdf"
+              },
               "url": ""
             }
           ]
         },
         {
-          "text": "Synopsis：",
+          "text": {
+            "ja": "Synopsis：",
+            "en": "Synopsis："
+          },
           "links": [
             {
-              "label": "https://physics.aps.org/articles/v18/s22",
+              "label": {
+                "ja": "https://physics.aps.org/articles/v18/s22",
+                "en": "https://physics.aps.org/articles/v18/s22"
+              },
               "url": ""
             }
           ]
@@ -557,10 +656,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参考)　日本地球惑星科学連合2024年大会 学生優秀発表賞",
+          "text": {
+            "ja": "(参考)　日本地球惑星科学連合2024年大会 学生優秀発表賞",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://www.jpgu.org/ospa/2024meeting/#sectionS"
             }
           ]
@@ -601,10 +706,16 @@
       "image": null,
       "citations": [
         {
-          "text": "",
+          "text": {
+            "ja": "",
+            "en": ""
+          },
           "links": [
             {
-              "label": "arXivを見る &rarr;",
+              "label": {
+                "ja": "arXivを見る &rarr;",
+                "en": "View on arXiv &rarr;"
+              },
               "url": "https://doi.org/10.48550/arXiv.2405.11810"
             }
           ]
@@ -645,10 +756,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参考)　日本高圧力学会 学生海外発表奨励金",
+          "text": {
+            "ja": "(参考)　日本高圧力学会 学生海外発表奨励金",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://www.highpressure.jp/abroad.html"
             }
           ]
@@ -672,10 +789,16 @@
       "image": null,
       "citations": [
         {
-          "text": "Sakai, F., Hirose, K., Morard, G., Partitioning of silicon and sulfur... <i>Earth Planet. Sci. Lett.</i>, 624, 118449, 2023.",
+          "text": {
+            "ja": "Sakai, F., Hirose, K., Morard, G., Partitioning of silicon and sulfur... <i>Earth Planet. Sci. Lett.</i>, 624, 118449, 2023.",
+            "en": "Sakai, F., Hirose, K., Morard, G., Partitioning of silicon and sulfur... <i>Earth Planet. Sci. Lett.</i>, 624, 118449, 2023."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.1016/j.epsl.2023.118449"
             }
           ]
@@ -699,11 +822,17 @@
       "image": null,
       "citations": [
         {
-          "text": "タイトル: Inner core crystallization constrains the core composition",
+          "text": {
+            "ja": "タイトル: Inner core crystallization constrains the core composition",
+            "en": ""
+          },
           "links": []
         },
         {
-          "text": "概要：地球のコアの密度は純鉄よりも小さく、このことからコアには軽元素が含まれていると考えられています。 従来、外核の密度欠損を説明するためにコア中の軽元素量が推定されてきましたが、 本研究では、これまでの制約条件に加え、リキダス相関係と固液分配係数を活用することで、 内核の密度欠損についても新たな制約条件を設けることが可能となりました。 本発表では、これらの手法に基づき、どの程度まで軽元素の組成に対する制約が厳密に行えるかについて議論しました。",
+          "text": {
+            "ja": "概要：地球のコアの密度は純鉄よりも小さく、このことからコアには軽元素が含まれていると考えられています。 従来、外核の密度欠損を説明するためにコア中の軽元素量が推定されてきましたが、 本研究では、これまでの制約条件に加え、リキダス相関係と固液分配係数を活用することで、 内核の密度欠損についても新たな制約条件を設けることが可能となりました。 本発表では、これらの手法に基づき、どの程度まで軽元素の組成に対する制約が厳密に行えるかについて議論しました。",
+            "en": ""
+          },
           "links": []
         }
       ]
@@ -725,10 +854,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参考)　SPring-8 大学院生提案型課題（長期型）",
+          "text": {
+            "ja": "(参考)　SPring-8 大学院生提案型課題（長期型）",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "http://www.spring8.or.jp/ja/students/budding/"
             }
           ]
@@ -752,10 +887,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参考)　地学オリンピック",
+          "text": {
+            "ja": "(参考)　地学オリンピック",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://jeso.jp/index.html"
             }
           ]
@@ -779,10 +920,16 @@
       "image": null,
       "citations": [
         {
-          "text": "",
+          "text": {
+            "ja": "",
+            "en": ""
+          },
           "links": [
             {
-              "label": "詳細はこちら &rarr;",
+              "label": {
+                "ja": "詳細はこちら &rarr;",
+                "en": "Details &rarr;"
+              },
               "url": "https://warp.ndl.go.jp/info:ndljp/pid/12972979/www.s.u-tokyo.ac.jp/ja/awards/encouragement/R4.html"
             }
           ]
@@ -806,11 +953,17 @@
       "image": null,
       "citations": [
         {
-          "text": "タイトル 1P58: Fe3S2 組成のコア圧力下その場 XRD 測定と Fe12S7の状態方程式の決定",
+          "text": {
+            "ja": "タイトル 1P58: Fe3S2 組成のコア圧力下その場 XRD 測定と Fe12S7の状態方程式の決定",
+            "en": ""
+          },
           "links": []
         },
         {
-          "text": "概要：マルチアンビル装置で合成したFe3S2をDACに詰め、高圧その場X線回折実験を行いました。 その結果、Fe3S2がFe12S7とFeSに分解することを突き止めました。 また、Fe12S7の状態方程式を決定し、火星コアでの挙動について議論しました。 これらの議論に基づき、火星コアに内核が存在する可能性を指摘しました。",
+          "text": {
+            "ja": "概要：マルチアンビル装置で合成したFe3S2をDACに詰め、高圧その場X線回折実験を行いました。 その結果、Fe3S2がFe12S7とFeSに分解することを突き止めました。 また、Fe12S7の状態方程式を決定し、火星コアでの挙動について議論しました。 これらの議論に基づき、火星コアに内核が存在する可能性を指摘しました。",
+            "en": ""
+          },
           "links": []
         }
       ]
@@ -849,10 +1002,16 @@
       "image": null,
       "citations": [
         {
-          "text": "(参照)　対称性・群論トレーニングコース",
+          "text": {
+            "ja": "(参照)　対称性・群論トレーニングコース",
+            "en": ""
+          },
           "links": [
             {
-              "label": "サイトを閲覧する &rarr;",
+              "label": {
+                "ja": "サイトを閲覧する &rarr;",
+                "en": "Visit the site &rarr;"
+              },
               "url": "http://pfwww.kek.jp/trainingcourse/index.html"
             }
           ]
@@ -876,10 +1035,16 @@
       "image": null,
       "citations": [
         {
-          "text": "",
+          "text": {
+            "ja": "",
+            "en": ""
+          },
           "links": [
             {
-              "label": "動画を見る &rarr;",
+              "label": {
+                "ja": "動画を見る &rarr;",
+                "en": "Watch the video &rarr;"
+              },
               "url": "https://www.youtube.com/watch?v=4LzvgWiZ6rw&t=1s"
             }
           ]
@@ -920,10 +1085,16 @@
       "image": null,
       "citations": [
         {
-          "text": "<strong>Sakai, F.</strong>, Hirose, K., Umemoto, K., Melting experiments on Fe-C-O to 200 GPa... <i>Geochem. Persp. Let.</i>, 22, 1–4, 2022.",
+          "text": {
+            "ja": "<strong>Sakai, F.</strong>, Hirose, K., Umemoto, K., Melting experiments on Fe-C-O to 200 GPa... <i>Geochem. Persp. Let.</i>, 22, 1–4, 2022.",
+            "en": "<strong>Sakai, F.</strong>, Hirose, K., Umemoto, K., Melting experiments on Fe-C-O to 200 GPa... <i>Geochem. Persp. Let.</i>, 22, 1–4, 2022."
+          },
           "links": [
             {
-              "label": "論文を見る &rarr;",
+              "label": {
+                "ja": "論文を見る &rarr;",
+                "en": "View the paper &rarr;"
+              },
               "url": "https://doi.org/10.7185/geochemlet.2218"
             }
           ]
