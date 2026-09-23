@@ -70,8 +70,10 @@ test("画像3件が正しいレイアウトで描画される", () => {
   assert.ok(html.includes('<div class="news-body has-image">'));
   assert.equal(countOccurrences(html, "news-body has-image"), 2);
   // 中央寄せ: div に text-align、img に width
-  assert.ok(
-    html.includes('<div class="news-image" style="text-align:center;"><img src="image/SP_award_cut.JPG" alt="SP8Award" style="width:75%">'),
+  // src はページの階層に依存しない絶対URLになる（assetUrl 経由）。
+  assert.match(
+    html,
+    /<div class="news-image" style="text-align:center;"><img src="[^"]*\/image\/SP_award_cut\.JPG" alt="SP8Award" style="width:75%">/,
   );
   assert.equal(countOccurrences(html, "<img src="), 3);
 });

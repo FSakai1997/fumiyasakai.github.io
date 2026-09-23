@@ -39,7 +39,8 @@ test("見出しの <br> は保たれる", () => {
 });
 
 test("画像とキャプションが描画される", () => {
-  assert.ok(html.includes('src="image/Earth.jpg"'));
+  // src はページの階層に依存しない絶対URLになる（assetUrl 経由）。
+  assert.match(html, /src="[^"]*\/image\/Earth\.jpg"/);
   assert.ok(html.includes('<div class="img-caption">高圧実験による地球深部物質の探査</div>'));
   assert.equal(count(html, "<img "), 2);
 });

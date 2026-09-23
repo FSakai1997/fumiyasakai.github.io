@@ -10,6 +10,7 @@
 
 import { archiveDate, recentDate, groupByYear } from "./format.js";
 import { pick, pickTitle, pickBody } from "./i18n.js";
+import { assetUrl } from "./paths.js";
 
 /** トップページの「Recent News」に出す件数。 */
 export const RECENT_NEWS_LIMIT = 10;
@@ -41,7 +42,7 @@ function escapeText(value) {
 
 function imageHtml(image, lang) {
   if (!image || !image.src) return "";
-  const src = escapeAttribute(image.src);
+  const src = escapeAttribute(assetUrl(image.src));
   const alt = escapeAttribute(pick(image.alt, lang));
   const imgStyle = image.width ? ` style="width:${escapeAttribute(image.width)}"` : "";
   // layout: "center" は本文の上に中央寄せで大きく出す。

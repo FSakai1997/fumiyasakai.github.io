@@ -9,6 +9,7 @@
  */
 
 import { pick } from "./i18n.js";
+import { assetUrl } from "./paths.js";
 
 // ページからの相対パスにすると /en/ 配下から呼んだときに壊れる。
 // このモジュールは常に /js/ にあるので、モジュール自身の位置を基準に解決する。
@@ -34,7 +35,7 @@ function imageHtml(image, lang) {
   const caption = pick(image.caption, lang);
   return [
     '    <div class="research-image">',
-    `        <img src="${escapeAttribute(image.src)}" alt="${escapeAttribute(pick(image.alt, lang))}" onerror="this.style.display='none'">`,
+    `        <img src="${escapeAttribute(assetUrl(image.src))}" alt="${escapeAttribute(pick(image.alt, lang))}" onerror="this.style.display='none'">`,
     caption ? `        <div class="img-caption">${escapeText(caption)}</div>` : "",
     "    </div>",
   ]
