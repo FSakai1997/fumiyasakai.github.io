@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HV9TNLE12M');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESEARCH - Fumiya Sakai</title>
+    <link rel="alternate" hreflang="ja" href="https://FSakai1997.github.io/fumiyasakai.github.io/research.html">
+    <link rel="alternate" hreflang="en" href="https://FSakai1997.github.io/fumiyasakai.github.io/en/research.html">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="nav-logo">Fumiya Sakai</span>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="research.html" class="active">RESEARCH</a>
+                <a href="cv.html">CV</a>
+                <a href="../research.html" class="lang-link" hreflang="ja">日本語</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>RESEARCH</h1>
+        <p>Exploring the deep interiors of Earth and planets through high-pressure experiments</p>
+    </header>
+
+    <div class="container" id="research-root"></div>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>For inquiries about my research, please contact me at the address below.</p>
+        <p class="email">E-mail: fumiya.sakai1997[at]gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fumiya Sakai</p>
+    </footer>
+
+    <script type="module">
+        import { mountResearch } from "../js/render-research.js";
+        mountResearch(document.getElementById("research-root"), "en");
+    </script>
+
+</body>
+</html>

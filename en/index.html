@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
     <script>
@@ -13,7 +13,7 @@
     <title>Fumiya Sakai</title>
     <link rel="alternate" hreflang="ja" href="https://FSakai1997.github.io/fumiyasakai.github.io/index.html">
     <link rel="alternate" hreflang="en" href="https://FSakai1997.github.io/fumiyasakai.github.io/en/index.html">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +26,7 @@
                 <a href="news.html">NEWS</a>
                 <a href="research.html">RESEARCH</a>
                 <a href="cv.html">CV</a>
-                <a href="en/index.html" class="lang-link" hreflang="en">EN</a>
+                <a href="../index.html" class="lang-link" hreflang="ja">日本語</a>
             </div>
         </div>
     </nav>
@@ -35,22 +35,22 @@
         <div class="hero-content">
             <h1>Fumiya Sakai</h1>
             <p class="subtitle">Ph.D. in Earth and Planetary Science</p>
-            <p class="affiliation">Institute of Science Tokyo / Ohta Lab</p>
+            <p class="affiliation">Institute of Science Tokyo / Ohta Laboratory</p>
         </div>
     </header>
 
     <section id="about" class="container">
         <div class="profile-layout">
             <div class="profile-image">
-                <img src="image/profile.jpg" alt="Fumiya Sakai">
+                <img src="../image/profile.jpg" alt="Fumiya Sakai">
             </div>
             <div class="profile-text">
                 <h2>Profile</h2>
-                <p class="name-ja">坂井 郁哉 <span class="name-en">(Fumiya Sakai)</span></p>
+                <p class="name-ja">Fumiya Sakai</p>
                 <ul class="profile-list">
-                    <li>東京科学大学 理学院 地球惑星科学系</li>
-                    <li>太田研究室 特別研究員(学振PD)</li>
-                    <li>専門：高圧実験、地球・惑星深部科学</li>
+                    <li>Department of Earth and Planetary Sciences, Institute of Science Tokyo</li>
+                    <li>Ohta Laboratory, JSPS Postdoctoral Research Fellow (PD)</li>
+                    <li>Research interests: high-pressure experiments, deep Earth and planetary science</li>
                 </ul>
                 <a href="cv.html" class="btn">View Full CV</a>
             </div>
@@ -62,13 +62,13 @@
         <ul id="recent-news" class="news-list">
             </ul>
         <div style="text-align: right; margin-top: 10px;">
-            <a href="news.html" class="text-link">ニュース一覧へ &rarr;</a>
+            <a href="news.html" class="text-link">All news &rarr;</a>
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>研究に関するお問い合わせは下記までお願いいたします。</p>
+        <p>For inquiries about my research, please contact me at the address below.</p>
         <p class="email">E-mail: fumiya.sakai1997[at]gmail.com</p>
     </section>
 
@@ -77,8 +77,9 @@
     </footer>
 
     <script type="module">
-        import { mountNews, renderRecent } from "./js/render-news.js";
-        mountNews(document.getElementById("recent-news"), renderRecent, "ja");
+        import { mountNews, renderRecent } from "../js/render-news.js";
+        mountNews(document.getElementById("recent-news"), renderRecent, "en");
     </script>
+
 </body>
 </html>

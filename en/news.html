@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9TNLE12M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HV9TNLE12M');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS - Fumiya Sakai</title>
+    <link rel="alternate" hreflang="ja" href="https://FSakai1997.github.io/fumiyasakai.github.io/news.html">
+    <link rel="alternate" hreflang="en" href="https://FSakai1997.github.io/fumiyasakai.github.io/en/news.html">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 未翻訳の案内。style.css には手を入れず、このページにだけ置く。 */
+        .translation-notice {
+            margin: 0 0 30px;
+            padding: 12px 16px;
+            background: #f4f8fb;
+            border-left: 3px solid #cdd8e3;
+            color: #667788;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="nav-logo">Fumiya Sakai</span>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html" class="active">NEWS</a>
+                <a href="research.html">RESEARCH</a>
+                <a href="cv.html">CV</a>
+                <a href="../news.html" class="lang-link" hreflang="ja">日本語</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>NEWS</h1>
+        <p>Research updates and activities</p>
+    </header>
+
+    <section class="container news-container">
+        <p id="translation-notice" class="translation-notice" hidden>
+            Some entries are currently available in Japanese only.
+        </p>
+        <div id="news-archive"></div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>For inquiries about my research, please contact me at the address below.</p>
+        <p class="email">E-mail: fumiya.sakai1997[at]gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fumiya Sakai</p>
+    </footer>
+
+    <script type="module">
+        import { loadNews, renderArchive } from "../js/render-news.js";
+        import { countUntranslated } from "../js/i18n.js";
+
+        loadNews()
+            .then((items) => {
+                renderArchive(document.getElementById("news-archive"), items, "en");
+                // 全件を訳し終えれば 0 になり、この案内は自動的に消える。
+                if (countUntranslated(items, "en") > 0) {
+                    document.getElementById("translation-notice").hidden = false;
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                document.getElementById("news-archive").textContent =
+                    "Could not load the news. Please reload the page.";
+            });
+    </script>
+
+</body>
+</html>
