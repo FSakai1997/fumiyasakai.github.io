@@ -75,8 +75,7 @@
 
     <script type="module">
         import { mountNews, renderRecent } from "./js/render-news.js";
-        import { currentLang } from "./js/i18n.js";
-        mountNews(document.getElementById("recent-news"), renderRecent, currentLang());
+        mountNews(document.getElementById("recent-news"), renderRecent, "ja");
     </script>
 </body>
 </html>
