@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>編集コンソール — Fumiya Sakai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ====================== ログイン ====================== -->
+<main id="login-view" class="login-view" hidden>
+    <div class="login-card">
+        <header class="login-head">
+            <p class="eyecatch">FUMIYASAKAI.GITHUB.IO</p>
+            <h1>編集コンソール</h1>
+            <p class="lede">
+                ニュースとCVをこの画面から編集し、GitHubへ保存します。
+                保存の約1〜2分後に公開サイトへ反映されます。
+            </p>
+        </header>
+
+        <form id="login-form" class="login-form" autocomplete="off">
+            <label class="field">
+                <span class="field-label">GitHub アクセストークン</span>
+                <input id="token-input" type="password" class="input mono"
+                       placeholder="github_pat_..." autocomplete="off" spellcheck="false">
+            </label>
+
+            <label class="checkbox">
+                <input id="remember-input" type="checkbox">
+                <span>
+                    このPCに記憶する
+                    <em class="caution">共用のPCでは、これを外してください。タブを閉じると消えます。</em>
+                </span>
+            </label>
+
+            <button id="login-button" type="submit" class="button primary">接続する</button>
+            <p id="login-error" class="error" hidden></p>
+        </form>
+
+        <details class="guide">
+            <summary>トークンの発行手順（初回のみ）</summary>
+            <ol class="guide-steps">
+                <li>
+                    GitHub &rarr; Settings &rarr; Developer settings &rarr;
+                    Personal access tokens &rarr; <strong>Fine-grained tokens</strong> &rarr;
+                    Generate new token
+                    <a href="https://github.com/settings/personal-access-tokens/new"
+                       target="_blank" rel="noopener" class="inline-link">発行ページを開く &rarr;</a>
+                </li>
+                <li>Repository access &rarr; <strong>Only select repositories</strong> &rarr;
+                    <code>fumiyasakai.github.io</code></li>
+                <li>Permissions &rarr; Repository permissions &rarr; <strong>Contents</strong> &rarr;
+                    <strong>Read and write</strong></li>
+                <li>Expiration &rarr; <strong>1年</strong>（期限が切れたら再発行が必要です）</li>
+                <li>生成された <code>github_pat_…</code> を上の欄に貼ってください</li>
+            </ol>
+            <p class="guide-note">
+                このトークンは、このリポジトリのファイル書き換えだけに使えます。
+                他のリポジトリやアカウント設定には影響しません。
+                漏れた場合は GitHub の設定画面から削除すれば即座に無効になります。
+            </p>
+        </details>
+    </div>
+</main>
+
+<!-- ====================== 編集 ====================== -->
+<div id="editor-view" class="editor-view" hidden>
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">FS</span>
+            <span class="brand-name">編集コンソール</span>
+        </div>
+
+        <nav class="tabs" role="tablist">
+            <button class="tab" role="tab" data-panel="news" aria-selected="true">ニュース</button>
+            <button class="tab" role="tab" data-panel="cv" aria-selected="false">CV</button>
+            <button class="tab" role="tab" data-panel="media" aria-selected="false">画像</button>
+        </nav>
+
+        <div class="topbar-right">
+            <span id="expiry-badge" class="badge mono" hidden></span>
+            <a href="../index.html" target="_blank" rel="noopener" class="ghost-link">公開サイト &rarr;</a>
+            <button id="logout-button" type="button" class="button ghost">ログアウト</button>
+        </div>
+    </header>
+
+    <div id="expiry-warning" class="banner warn" hidden></div>
+
+    <main class="panels">
+        <section id="panel-news" class="panel" role="tabpanel"></section>
+        <section id="panel-cv" class="panel" role="tabpanel" hidden></section>
+        <section id="panel-media" class="panel" role="tabpanel" hidden></section>
+    </main>
+</div>
+
+<div id="boot" class="boot">読み込んでいます…</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
