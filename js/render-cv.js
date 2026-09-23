@@ -11,7 +11,9 @@
 
 import { pick } from "./i18n.js";
 
-const DATA_URL = "data/cv.json";
+// ページからの相対パスにすると /en/ 配下から呼んだときに壊れる。
+// このモジュールは常に /js/ にあるので、モジュール自身の位置を基準に解決する。
+const DATA_URL = new URL("../data/cv.json", import.meta.url);
 
 function escapeText(value) {
   return String(value ?? "")

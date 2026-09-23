@@ -20,7 +20,9 @@ const OLDEST_GROUPED_YEAR = 2022;
 /** 先頭からこの数のグループを開いた状態で表示する。 */
 const OPEN_GROUP_COUNT = 2;
 
-const DATA_URL = "data/news.json";
+// ページからの相対パスにすると /en/ 配下から呼んだときに壊れる。
+// このモジュールは常に /js/ にあるので、モジュール自身の位置を基準に解決する。
+const DATA_URL = new URL("../data/news.json", import.meta.url);
 
 function escapeAttribute(value) {
   return String(value ?? "")
