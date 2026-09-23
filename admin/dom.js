@@ -31,17 +31,32 @@ export function h(tag, props = {}, ...children) {
     else if (key === "html") el.innerHTML = value;
     else if (key.startsWith("on") && typeof value === "function") {
       el.addEventListener(key.slice(2).toLowerCase(), value);
-    } else if (key in el) el[key] = value;
-    else el.setAttribute(key, value);
+    } else setProperty(el, key, value);
   }
 
   append(el, children);
 
-  if (deferredValue !== undefined) {
-    if ("value" in el) el.value = deferredValue;
-    else el.setAttribute("value", deferredValue);
-  }
+  if (deferredValue !== undefined) setProperty(el, "value", deferredValue);
   return el;
+}
+
+/**
+ * プロパティとして設定し、できなければ属性として設定する。
+ *
+ * DOM には「プロパティとしては存在するのに読み取り専用」のものがある。
+ * たとえば input の list は、対応する datalist 要素を返すだけの getter で、
+ * 代入すると例外になる（モジュールは strict mode で動くため無視されない）。
+ */
+function setProperty(el, key, value) {
+  if (key in el) {
+    try {
+      el[key] = value;
+      return;
+    } catch {
+      // 読み取り専用だった。属性で設定し直す。
+    }
+  }
+  el.setAttribute(key, value);
 }
 
 export function append(parent, children) {
