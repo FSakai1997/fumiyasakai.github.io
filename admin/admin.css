@@ -713,3 +713,105 @@ code {
 
     .image-editor { grid-template-columns: 1fr; }
 }
+
+/* =========================================================================
+   画像
+   ========================================================================= */
+
+.media-panel { padding: 18px 20px 60px; display: grid; gap: 16px; align-content: start; }
+
+.media-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+
+.media-head .button { position: relative; overflow: hidden; }
+
+.file-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    gap: 14px;
+}
+
+.media-item {
+    display: grid;
+    gap: 5px;
+    padding: 9px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+}
+
+.media-thumb {
+    aspect-ratio: 4 / 3;
+    display: grid;
+    place-items: center;
+    background: var(--ink);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.media-thumb img { max-width: 100%; max-height: 100%; display: block; }
+
+.media-name {
+    font-size: 11px;
+    color: var(--text-dim);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.media-size { font-size: 10.5px; color: var(--text-faint); }
+
+.media-actions { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 3px; }
+
+.media-actions .button { flex: 1; padding: 4px 6px; font-size: 11px; }
+
+/* =========================================================================
+   モーダル
+   ========================================================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(8, 10, 13, 0.72);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    width: min(880px, 100%);
+    max-height: 82vh;
+    background: var(--ink);
+    border: 1px solid var(--rule);
+    border-top: 2px solid var(--signal);
+    border-radius: var(--radius);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+}
+
+.modal-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 0 16px;
+    height: 46px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--rule);
+}
+
+.modal-head .button { margin-left: auto; }
+
+.modal-body { flex: 1; overflow-y: auto; min-height: 0; }
+
+.modal-body .media-panel { padding: 16px; }

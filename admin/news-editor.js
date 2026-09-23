@@ -10,6 +10,7 @@ import { h, replace } from "./dom.js";
 import { JsonStore, ConflictError, commitMessage } from "./store.js";
 import { Preview } from "./preview.js";
 import { renderNewsForm } from "./news-form.js";
+import { pickImage } from "./media.js";
 import { newsCardHtml } from "../js/render-news.js";
 import { archiveDate } from "../js/format.js";
 import { pickTitle } from "../js/i18n.js";
@@ -130,6 +131,7 @@ export async function initNewsEditor(container, api) {
     }
     renderNewsForm(formEl, item, {
       tagOptions: tagOptions(),
+      onPickImage: () => pickImage(api),
       onChange: ({ listDirty = true } = {}) => {
         touch();
         if (listDirty) renderList();
