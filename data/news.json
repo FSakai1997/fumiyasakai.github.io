@@ -102,7 +102,10 @@
       },
       "image": {
         "src": "image/SP_award_cut.JPG",
-        "alt": "SP8Award",
+        "alt": {
+          "ja": "SP8Award",
+          "en": "SP8Award"
+        },
         "layout": "center",
         "width": "75%"
       },
@@ -204,7 +207,10 @@
       },
       "image": {
         "src": "image/PhD.jpg",
-        "alt": "PhD",
+        "alt": {
+          "ja": "PhD",
+          "en": "PhD"
+        },
         "layout": "side"
       },
       "citations": []
@@ -296,7 +302,10 @@
       },
       "image": {
         "src": "image/AIRAPT_29.JPG",
-        "alt": "AIRAPT-29",
+        "alt": {
+          "ja": "AIRAPT-29",
+          "en": "AIRAPT-29"
+        },
         "layout": "side"
       },
       "citations": []

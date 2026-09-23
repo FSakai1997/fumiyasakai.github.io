@@ -54,9 +54,25 @@ test("開きタグと閉じタグの数が合う", () => {
 });
 
 test("英語が未入力なら日本語を表示する", () => {
-  const englishHtml = researchHtml(data, "en");
+  // 実データの翻訳が進むとこの性質は観測できなくなるので、
+  // 英語を空にしたデータを作って確かめる。
+  const untranslated = structuredClone(data);
+  for (const topic of untranslated.topics) {
+    topic.heading.en = "";
+    topic.body.en = "";
+    if (topic.image) topic.image.caption.en = "";
+  }
+
+  const englishHtml = researchHtml(untranslated, "en");
   assert.ok(englishHtml.includes("地球コアの組成決定"));
   assert.ok(englishHtml.includes("高圧実験による地球深部物質の探査"));
+});
+
+test("実データは英訳済みで、英語ページに日本語が出ない", () => {
+  const englishHtml = researchHtml(data, "en");
+  assert.ok(englishHtml.includes("Determining the Composition"));
+  const japanese = englishHtml.match(/[぀-ヿ一-鿿]+/g) ?? [];
+  assert.deepEqual(japanese, [], `英語ページに日本語が残っている: ${japanese.slice(0, 3)}`);
 });
 
 test("英語が入っていれば英語を表示する", () => {
@@ -81,4 +97,13 @@ test("画像のないテーマでも描画できる", () => {
 
 test("テーマが0件でも落ちない", () => {
   assert.equal(researchHtml({ schemaVersion: 1, topics: [] }, "ja"), "");
+});
+
+test("代替テキストも言語に応じて切り替わる", () => {
+  // alt は読み上げソフトが読む文なので、ページの言語に合わせる必要がある。
+  const japanese = researchHtml(data, "ja");
+  const english = researchHtml(data, "en");
+  assert.ok(japanese.includes('alt="地球内部構造とDAC実験のイメージ"'));
+  assert.ok(english.includes("alt=\"Illustration of the Earth"));
+  assert.ok(!english.includes('alt="地球内部構造'), "英語ページに日本語の alt が残っている");
 });

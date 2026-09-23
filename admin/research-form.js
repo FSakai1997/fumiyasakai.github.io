@@ -84,13 +84,15 @@ export function renderTopicForm(container, topic, options) {
             field(
               "代替テキスト",
               textInput(
-                image.alt,
+                image.alt?.[lang],
                 (value) => {
-                  image.alt = value;
+                  image.alt = image.alt ?? { ja: "", en: "" };
+                  image.alt[lang] = value;
                   changed();
                 },
-                { placeholder: "画像の説明（言語を問わず共通）" },
+                { placeholder: lang === "en" ? EN_PLACEHOLDER : "画像の説明" },
               ),
+              "画面には出ませんが、読み上げソフトが読む文です",
             ),
             field(
               "キャプション",
@@ -145,7 +147,7 @@ export function renderTopicForm(container, topic, options) {
             type: "button",
             class: "button small",
             onclick: () => {
-              topic.image = { src: "", alt: "", caption: { ja: "", en: "" } };
+              topic.image = { src: "", alt: { ja: "", en: "" }, caption: { ja: "", en: "" } };
               changed({ rerender: true });
             },
           },
@@ -160,6 +162,6 @@ export function blankTopic() {
     id: `topic-${Math.random().toString(36).slice(2, 6)}`,
     heading: { ja: "", en: "" },
     body: { ja: "<p></p>", en: "" },
-    image: { src: "", alt: "", caption: { ja: "", en: "" } },
+    image: { src: "", alt: { ja: "", en: "" }, caption: { ja: "", en: "" } },
   };
 }

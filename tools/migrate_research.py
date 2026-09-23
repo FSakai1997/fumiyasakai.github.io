@@ -59,7 +59,7 @@ def parse_topic(block: str, index: int) -> dict:
         if img:
             image = {
                 "src": attr(img.group(1), "src"),
-                "alt": attr(img.group(1), "alt"),
+                "alt": {"ja": attr(img.group(1), "alt"), "en": ""},
                 "caption": {"ja": tidy(caption.group(1)) if caption else "", "en": ""},
             }
 

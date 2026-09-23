@@ -10,8 +10,12 @@
       ]
     },
     "en": {
-      "name": "",
-      "lines": []
+      "name": "Fumiya Sakai",
+      "lines": [
+        "Department of Earth and Planetary Sciences, School of Science, Institute of Science Tokyo",
+        "Ohta Laboratory, JSPS Research Fellow (PD)",
+        "Email: fumiya.sakai1997[at]gmail.com"
+      ]
     }
   },
   "sections": [
@@ -55,32 +59,32 @@
         {
           "date": "2026.04 - 2029.03",
           "ja": "日本学術振興会(JSPS) 特別研究員 (PD)",
-          "en": ""
+          "en": "JSPS Research Fellowship for Young Scientists (PD), Japan Society for the Promotion of Science"
         },
         {
           "date": "2024.09 - 2024.12",
           "ja": "東京大学 Graduate Research Abroad in Science Program (GRASP)",
-          "en": ""
+          "en": "Graduate Research Abroad in Science Program (GRASP), The University of Tokyo"
         },
         {
           "date": "2023.12",
           "ja": "日本高圧力学会 海外学生発表奨励金",
-          "en": ""
+          "en": "Student Travel Grant for Presentations Abroad, The Japan Society of High Pressure Science and Technology"
         },
         {
           "date": "2023.10 - 2026.02",
           "ja": "SPring-8 大学院生提案型課題 (長期型) 代表者",
-          "en": ""
+          "en": "Principal Investigator, SPring-8 Graduate Student Research Proposal (Long-term)"
         },
         {
           "date": "2023.04 - 2026.03",
           "ja": "日本学術振興会(JSPS) 特別研究員 (DC1)",
-          "en": ""
+          "en": "JSPS Research Fellowship for Young Scientists (DC1), Japan Society for the Promotion of Science"
         },
         {
           "date": "2021.10 - 2026.03",
           "ja": "東京大学宇宙地球科学フロンティア卓越大学院プログラム (IGPEES)",
-          "en": ""
+          "en": "International Graduate Program for Excellence in Earth-Space Science (IGPEES), The University of Tokyo"
         }
       ]
     },
@@ -92,12 +96,12 @@
         {
           "date": "2026.04",
           "ja": "高輝度光科学研究センター SPring-8大学院生課題優秀研究賞",
-          "en": ""
+          "en": "SPring-8 Excellent Research Award for Graduate Student Proposals, Japan Synchrotron Radiation Research Institute (JASRI)"
         },
         {
           "date": "2026.03",
           "ja": "東京大学理学系研究科 研究奨励賞 (博士)",
-          "en": ""
+          "en": "Research Encouragement Award (Doctoral), Graduate School of Science, The University of Tokyo"
         },
         {
           "date": "2025.10",
@@ -107,37 +111,37 @@
         {
           "date": "2025.08",
           "ja": "東京大学宇宙地球科学フロンティア卓越大学院プログラム FE優秀賞",
-          "en": ""
+          "en": "Excellence Award for the Final Examination (FE), International Graduate Program for Excellence in Earth-Space Science (IGPEES), The University of Tokyo"
         },
         {
           "date": "2025.07",
           "ja": "日本地球惑星科学連合2025年大会 (JpGU2025) 学生優秀発表賞",
-          "en": ""
+          "en": "Outstanding Student Presentation Award (OSPA), Japan Geoscience Union Meeting 2025 (JpGU2025)"
         },
         {
           "date": "2024.07",
           "ja": "日本地球惑星科学連合2024年大会 (JpGU2024) 学生優秀発表賞",
-          "en": ""
+          "en": "Outstanding Student Presentation Award (OSPA), Japan Geoscience Union Meeting 2024 (JpGU2024)"
         },
         {
           "date": "2023.03",
           "ja": "東京大学理学系研究科 研究奨励賞 (修士)",
-          "en": ""
+          "en": "Research Encouragement Award (Master's), Graduate School of Science, The University of Tokyo"
         },
         {
           "date": "2023.03",
           "ja": "東京大学宇宙地球科学フロンティア卓越大学院プログラム QE優秀賞",
-          "en": ""
+          "en": "Excellence Award for the Qualifying Examination (QE), International Graduate Program for Excellence in Earth-Space Science (IGPEES), The University of Tokyo"
         },
         {
           "date": "2021.07",
           "ja": "日本地球惑星科学連合2021年大会 (JpGU2021) 学生優秀発表賞",
-          "en": ""
+          "en": "Outstanding Student Presentation Award (OSPA), Japan Geoscience Union Meeting 2021 (JpGU2021)"
         },
         {
           "date": "2021.03",
           "ja": "東京大学理学部 学修奨励賞",
-          "en": ""
+          "en": "Academic Achievement Award, Faculty of Science, The University of Tokyo"
         }
       ]
     },
@@ -198,7 +202,7 @@
         {
           "date": "",
           "ja": "<strong>坂井 郁哉</strong>, 高圧その場 X 線回折実験による火星コアの構造解明, <i>SPring-8/SACLA/NanoTerasu 利用者情報</i>, 2(3), 136-141, 2026. <a href=\"https://ssn-info.jasri.jp/volume-02-no3/1602/\" target=\"_blank\">[DOI]</a>",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Revealing the structure of the Martian core by in situ high-pressure X-ray diffraction experiments, <i>SPring-8/SACLA/NanoTerasu Users Information</i>, 2(3), 136-141, 2026. (in Japanese) <a href=\"https://ssn-info.jasri.jp/volume-02-no3/1602/\" target=\"_blank\">[Link]</a>"
         },
         {
           "date": "",
@@ -289,27 +293,27 @@
         {
           "date": "",
           "ja": "<strong>坂井郁哉</strong>, X線回折測定による火星の外核・内核の組成推定, 第12回PRIUSシンポジウム, 日本, (松山, 2026.03.02). 口頭",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Estimating the compositions of the Martian outer and inner core from X-ray diffraction measurements, 12th PRIUS Symposium, Japan, (Matsuyama, 2026.03.02). Oral Presentation (in Japanese)"
         },
         {
           "date": "",
           "ja": "<strong>坂井郁哉</strong>, X線回折測定による火星コア条件下における液体FeSの密度決定, SPRUCシンポジウム 2025, 日本, (宮城, 2025.09.05). ポスター",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Density determination of liquid FeS under Martian core conditions by X-ray diffraction measurements, SPRUC Symposium 2025, Japan, (Miyagi, 2025.09.05). Poster (in Japanese)"
         },
         {
           "date": "",
           "ja": "<strong>坂井郁哉</strong>, 火星コア圧力下におけるFe-FeS状態図の決定─Fe12S7内核の可能性─, SPring-8 シンポジウム 2024, 日本, (福岡, 2024.09.05). ポスター",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Determination of the Fe-FeS phase diagram under Martian core pressures: the possibility of an Fe12S7 inner core, SPring-8 Symposium 2024, Japan, (Fukuoka, 2024.09.05). Poster (in Japanese)"
         },
         {
           "date": "",
           "ja": "<strong>坂井郁哉</strong>, 廣瀬敬， Fe3S2 組成のコア圧力下その場 XRD 測定と Fe12S7の状態方程式の決定, 第63回高圧討論会, 日本, (大阪, 2022.12.13). ポスター",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Hirose, K., In situ XRD measurements of Fe3S2 under core pressures and determination of the equation of state of Fe12S7, 63rd High Pressure Conference of Japan, Japan, (Osaka, 2022.12.13). Poster (in Japanese)"
         },
         {
           "date": "",
           "ja": "<strong>坂井郁哉</strong>, 丹羽佑果, 大島由佳, 宮田隆志, 吉井譲, 大澤亮, 高橋英則, 森由貴, 他銀河学校2020スタッフ, サイエンスステーション, 高校生向け天文学実習「銀河学校」のオンライン実施報告, 日本天文学会2021年春季年会 (オンライン, 2021.03.17)．Y03a，口頭",
-          "en": ""
+          "en": "<strong>Sakai, F.</strong>, Niwa, Y., Oshima, Y., Miyata, T., Yoshii, Y., Ohsawa, R., Takahashi, H., Mori, Y., other Galaxy School 2020 staff, Science Station, Report on the online edition of Galaxy School, an astronomy research program for high school students, Astronomical Society of Japan 2021 Spring Annual Meeting, (Online, 2021.03.17). Y03a, Oral Presentation (in Japanese)"
         }
       ]
     },
@@ -347,7 +351,7 @@
         {
           "date": "",
           "ja": "竹下 潤, 彦坂 晃太郎, <strong>坂井 郁哉</strong>, 廣瀬 敬, メタンの高温高圧での相転移と液相密度, 第65回高圧討論会, 日本, (岩手, 2024.11.13). ポスター",
-          "en": ""
+          "en": "Takeshita, J., Hikosaka, K., <strong>Sakai, F.</strong>, Hirose, K., Phase transitions and liquid density of methane at high pressure and temperature, 65th High Pressure Conference of Japan, Japan, (Iwate, 2024.11.13). Poster (in Japanese)"
         },
         {
           "date": "",
@@ -357,7 +361,7 @@
         {
           "date": "",
           "ja": "大島 由佳，<strong>坂井 郁哉</strong>, 宮田 隆志，吉井 譲，高橋 英則，新納 悠, 森 由貴，他銀河学校 2021 スタッフ，サイエンスステーション，高校生向け天文学実習「銀河学校 2021」オンライン実施報告，日本天文学会2022 年春季年会 (オンライン, 2022.3.3)．Y02a，口頭",
-          "en": ""
+          "en": "Oshima, Y., <strong>Sakai, F.</strong>, Miyata, T., Yoshii, Y., Takahashi, H., Niino, Y., Mori, Y., other Galaxy School 2021 staff, Science Station, Report on the online edition of Galaxy School 2021, an astronomy research program for high school students, Astronomical Society of Japan 2022 Spring Annual Meeting, (Online, 2022.03.03). Y02a, Oral Presentation (in Japanese)"
         },
         {
           "date": "",
@@ -374,17 +378,17 @@
         {
           "date": "2026.10-",
           "ja": "東京大学理学部地球惑星物理学科　非常勤講師　地球惑星物理学実験・地球惑星化学実験",
-          "en": ""
+          "en": "Part-time Lecturer, Department of Earth and Planetary Physics, Faculty of Science, The University of Tokyo: laboratory courses in Earth and Planetary Physics and Earth and Planetary Chemistry"
         },
         {
           "date": "2022.08.03",
           "ja": "「地球の\"コア\"な話～高圧実験で見る地球の深部～」,  東京大学理学部オープンキャンパス2022ライブ講演 <a href=\"https://www.youtube.com/watch?v=4LzvgWiZ6rw&t=1s\" target=\"_blank\">[Video]</a>",
-          "en": ""
+          "en": "\"The Core of the Earth: Looking into the Deep Interior through High-Pressure Experiments\", live lecture at Open Campus 2022, Faculty of Science, The University of Tokyo <a href=\"https://www.youtube.com/watch?v=4LzvgWiZ6rw&t=1s\" target=\"_blank\">[Video]</a>"
         },
         {
           "date": "2019.12.13",
           "ja": "「自然現象とモデル化」，島根県立松江北高等学校出張授業",
-          "en": ""
+          "en": "\"Natural Phenomena and Modeling\", guest lecture at Matsue Kita High School, Shimane"
         }
       ]
     },
@@ -396,32 +400,32 @@
         {
           "date": "2021.04 - 2025.03",
           "ja": "国立天文台 定例観望会スタッフ",
-          "en": ""
+          "en": "Staff, Public Stargazing Program, National Astronomical Observatory of Japan"
         },
         {
           "date": "2019.03 - 2023.03",
           "ja": "NPO 法人地学オリンピック日本委員会 日本地学オリンピック本選チューター",
-          "en": ""
+          "en": "Tutor, Final Round of the Japan Earth Science Olympiad, NPO Japan Committee of the Earth Science Olympiad"
         },
         {
           "date": "2019.03 - 2021.03",
           "ja": "NPO 法人 Science Station 銀河学校 ティーチングアシスタント",
-          "en": ""
+          "en": "Teaching Assistant, Galaxy School, NPO Science Station"
         },
         {
           "date": "2018.12, 2019.12",
           "ja": "NPO 法人 Science Station・島根県立松江北高等学校共催 サイエンスカフェ in 松江",
-          "en": ""
+          "en": "Science Cafe in Matsue, co-hosted by NPO Science Station and Matsue Kita High School, Shimane"
         },
         {
           "date": "2018.12, 2019.12",
           "ja": "島根県立松江北高等学校 出張授業",
-          "en": ""
+          "en": "Guest lectures at Matsue Kita High School, Shimane"
         },
         {
           "date": "2018.08",
           "ja": "東京大学木曽観測所 星の教室 ティーチングアシスタント",
-          "en": ""
+          "en": "Teaching Assistant, Hoshi-no-Kyoshitsu (Star Classroom), Kiso Observatory, The University of Tokyo"
         }
       ]
     },
@@ -433,12 +437,12 @@
         {
           "date": "2021.03",
           "ja": "高等学校教諭一種免許状(理科) 取得",
-          "en": ""
+          "en": "Type 1 Teaching License for Upper Secondary School (Science), Japan"
         },
         {
           "date": "2019.03",
           "ja": "気象予報士資格 取得",
-          "en": ""
+          "en": "Certified Weather Forecaster (national qualification, Japan)"
         }
       ]
     }

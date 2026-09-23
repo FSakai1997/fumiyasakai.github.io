@@ -9,7 +9,7 @@
  */
 
 import { archiveDate, recentDate, groupByYear } from "./format.js";
-import { pickTitle, pickBody } from "./i18n.js";
+import { pick, pickTitle, pickBody } from "./i18n.js";
 
 /** トップページの「Recent News」に出す件数。 */
 export const RECENT_NEWS_LIMIT = 10;
@@ -39,10 +39,10 @@ function escapeText(value) {
     .replace(/>/g, "&gt;");
 }
 
-function imageHtml(image) {
+function imageHtml(image, lang) {
   if (!image || !image.src) return "";
   const src = escapeAttribute(image.src);
-  const alt = escapeAttribute(image.alt ?? "");
+  const alt = escapeAttribute(pick(image.alt, lang));
   const imgStyle = image.width ? ` style="width:${escapeAttribute(image.width)}"` : "";
   // layout: "center" は本文の上に中央寄せで大きく出す。
   // layout: "side" は news-body の has-image と組み合わせて本文の左に並べる。
@@ -79,7 +79,7 @@ export function newsCardHtml(item, lang) {
     `    <div class="news-meta"><span class="news-date">${escapeText(archiveDate(item))}</span><span class="news-tag">${escapeText(item.tag ?? "")}</span></div>`,
     `    <h3 class="news-title">${escapeText(pickTitle(item, lang))}</h3>`,
     `    <div class="${bodyClass}">`,
-    imageHtml(image),
+    imageHtml(image, lang),
     pickBody(item, lang),
     citationsHtml(item.citations),
     "    </div>",

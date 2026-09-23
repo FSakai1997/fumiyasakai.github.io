@@ -5,18 +5,21 @@
       "id": "topic-1",
       "heading": {
         "ja": "地球コアの組成決定：<br>軽元素の分配挙動の解明",
-        "en": ""
+        "en": "Determining the Composition of Earth's Core:<br>Partitioning Behavior of Light Elements"
       },
       "body": {
         "ja": "<p> 近年、はやぶさ2をはじめとした宇宙探査プロジェクトにより近宇宙のサンプルが直接採取できるようになりました。 しかし、地球の深部には依然として多くの謎が残っています。特に、地球全体のおよそ3割を占めるコアに関しては、未解明な点が多いのが現状です。 コア由来の試料は地球の表層に運ばれないため、直接的なサンプリングが不可能だからです。 </p>\n<p> 地球コアの組成を推定する主要な手法の一つが地震波観測です。これまでの研究により、コアの密度は純鉄よりも低く、鉄よりも軽い<strong>\"軽元素 (Si, S, O, C, Hなど)\"</strong>が含まれていることがわかっています。 しかし、これらの元素が具体的に「どの種類」で「どの程度」含まれているのかは、長年の論争の的です。 </p>\n<p> 私は、外核（液体）と内核（固体）の密度がすでに推定されていることに着目し、両方の組成を同時に制約することで、より精密なコア組成の決定を試みています。 特に、軽元素同士の相互作用によって<strong>固液分配係数</strong>（元素の固体・液体間における分配比）が変化することに着目し、 <strong>ダイヤモンドアンビルセル（DAC）</strong>を用いた超高圧実験により、地球中心核に匹敵する極限環境下での元素のふるまいを解明しています。 </p>",
-        "en": ""
+        "en": "<p>Recent missions such as Hayabusa2 have made it possible to bring back samples from nearby space directly. The interior of our own planet, however, remains far less accessible. The core, which accounts for roughly 30% of the Earth, is particularly poorly understood, because no material from it is ever carried to the surface and direct sampling is therefore impossible.</p>\n<p>One of the main ways to infer the composition of the core is seismic observation. Earlier work has established that the core is less dense than pure iron, and must therefore contain <strong>\"light elements\" (Si, S, O, C, H and others)</strong>. Exactly which elements are present, and in what amounts, has been debated for decades.</p>\n<p>Since the densities of both the liquid outer core and the solid inner core have already been estimated, I aim to determine the composition of the core more precisely by constraining both at the same time. I focus in particular on how interactions among light elements alter the <strong>solid-liquid partition coefficient</strong>, the ratio in which an element is distributed between the solid and the liquid. Using ultrahigh-pressure experiments with a <strong>diamond anvil cell (DAC)</strong>, I observe how these elements behave under conditions comparable to those at the center of the Earth.</p>"
       },
       "image": {
         "src": "image/Earth.jpg",
-        "alt": "地球内部構造とDAC実験のイメージ",
+        "alt": {
+          "ja": "地球内部構造とDAC実験のイメージ",
+          "en": "Illustration of the Earth's interior and a diamond anvil cell experiment"
+        },
         "caption": {
           "ja": "高圧実験による地球深部物質の探査",
-          "en": ""
+          "en": "Probing deep Earth materials through high-pressure experiments"
         }
       }
     },
@@ -24,18 +27,21 @@
       "id": "topic-2",
       "heading": {
         "ja": "火星の内部構造と進化：<br>硫黄に富むコアの謎",
-        "en": ""
+        "en": "The Interior Structure and Evolution of Mars:<br>The Puzzle of a Sulfur-Rich Core"
       },
       "body": {
         "ja": "<p> NASAの探査機InSightによる火震波（火星の地震波）観測により、火星のコアの半径と密度が直接測定されました。 その結果、コアは従来の予想よりも大きく、密度が低いことが明らかになりました。 この低密度を説明するためには、鉄に加えて大量の軽元素、特に<strong>硫黄 (S)</strong> が必要であるとされています。 </p>\n<p> 火星表面における親銅元素の枯渇や、火星隕石の分析結果からも、火星コアには多量の硫黄が含まれている可能性が指摘されています。 しかし、これほど硫黄に富んだ条件下での鉄-硫黄系の高圧実験データは不足しており、火星コア圧力における融解相図（リキダス相図）すら確立されていませんでした。 </p>\n<p> そこで私は、鉄-硫黄系の高圧実験を通じて、火星コアの内部構造や熱進化の歴史を再構築しています。 具体的には、「どのような組成の固体が液体コアから結晶化するのか」「火星に内核は存在するのか」といった問いに対し、 実験データに基づいた新たなモデルを提唱しています。特に、<strong>Fe<sub>12</sub>S<sub>7</sub></strong> という相が内核として存在する可能性について研究を進めています。 </p>",
-        "en": ""
+        "en": "<p>Marsquake observations by NASA's InSight lander have provided direct estimates of the radius and density of the Martian core. The core turned out to be larger, and less dense, than previously expected. Accounting for that low density requires a substantial amount of light elements in addition to iron, with <strong>sulfur (S)</strong> as the leading candidate.</p>\n<p>The depletion of chalcophile elements at the Martian surface, together with analyses of Martian meteorites, likewise points to a core rich in sulfur. High-pressure experimental data on the Fe-S system under such sulfur-rich conditions have been scarce, however, and even the melting (liquidus) phase diagram at Martian core pressures had not been established.</p>\n<p>I am therefore reconstructing the interior structure and thermal history of Mars through high-pressure experiments on the Fe-S system. Building on experimental data, I propose new models addressing questions such as which solid composition crystallizes from the liquid core, and whether Mars has an inner core at all. I am currently investigating the possibility that a phase called <strong>Fe<sub>12</sub>S<sub>7</sub></strong> forms that inner core.</p>"
       },
       "image": {
         "src": "image/FeS_phase.jpg",
-        "alt": "火星内部構造とFe-S系相図",
+        "alt": {
+          "ja": "火星内部構造とFe-S系相図",
+          "en": "Illustration of the Martian interior and the Fe-S phase diagram"
+        },
         "caption": {
           "ja": "火星コア中心圧力のFe-S系相図 (Sakai and Hirose, 2026)",
-          "en": ""
+          "en": "Phase diagram of the Fe-S system at the pressure of the Martian core center (Sakai and Hirose, 2026)"
         }
       }
     }

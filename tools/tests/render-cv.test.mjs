@@ -74,8 +74,21 @@ test("エントリの総数は69件", () => {
 });
 
 test("英語指定でも、未翻訳の項目は日本語で表示される", () => {
-  const englishHtml = cvHtml(cv, "en");
+  // 実データの翻訳が進むとこの性質は観測できなくなるので、
+  // 英語を空にしたデータを作って確かめる。
+  const untranslated = structuredClone(cv);
+  untranslated.profile.en = { name: "", lines: [] };
+  for (const section of untranslated.sections) {
+    for (const entry of section.entries) entry.en = "";
+  }
+
+  const englishHtml = cvHtml(untranslated, "en");
   assert.ok(englishHtml.includes("東京科学大学理学院 地球惑星科学系"));
-  // 言語に依存しない Publications は、そのまま出る。
   assert.ok(englishHtml.includes("Geochemical Perspectives Letters"));
+});
+
+test("英語が入っていれば英語を表示する", () => {
+  const englishHtml = cvHtml(cv, "en");
+  assert.ok(englishHtml.includes("Institute of Science Tokyo"));
+  assert.ok(!englishHtml.includes("東京科学大学理学院"), "日本語のプロフィールが残っている");
 });

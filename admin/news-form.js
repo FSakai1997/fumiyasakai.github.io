@@ -142,10 +142,19 @@ export function renderNewsForm(container, item, options) {
               image.src = value;
               changed({ rerender: true });
             }, { mono: true })),
-            field("代替テキスト", textInput(image.alt, (value) => {
-              image.alt = value;
-              changed();
-            }, { placeholder: "画像の説明" })),
+            field(
+              "代替テキスト",
+              textInput(
+                image.alt?.[lang],
+                (value) => {
+                  image.alt = image.alt ?? { ja: "", en: "" };
+                  image.alt[lang] = value;
+                  changed();
+                },
+                { placeholder: "画像の説明" },
+              ),
+              "画面には出ませんが、読み上げソフトが読む文です",
+            ),
             h(
               "div",
               { class: "form-grid two" },
@@ -212,7 +221,7 @@ export function renderNewsForm(container, item, options) {
             type: "button",
             class: "button small",
             onclick: () => {
-              item.image = { src: "", alt: "", layout: "side" };
+              item.image = { src: "", alt: { ja: "", en: "" }, layout: "side" };
               changed({ rerender: true });
             },
           },

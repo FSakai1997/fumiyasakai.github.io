@@ -94,7 +94,7 @@ def parse_image(inner: str, body_classes: str) -> dict | None:
     if not m:
         return None
     attrs = m.group(1)
-    image = {"src": attr(attrs, "src"), "alt": attr(attrs, "alt")}
+    image = {"src": attr(attrs, "src"), "alt": {"ja": attr(attrs, "alt"), "en": attr(attrs, "alt")}}
     # has-image は本文と横並び、そうでなければ中央寄せの大きな画像。
     image["layout"] = "side" if "has-image" in body_classes.split() else "center"
     width = re.search(r"width:\s*([^;\"]+)", attr(attrs, "style"))

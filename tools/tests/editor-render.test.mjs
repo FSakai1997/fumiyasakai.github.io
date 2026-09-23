@@ -298,7 +298,8 @@ test("研究テーマの英語タブで入力しても日本語を壊さない",
   assert.equal(topic.body.ja, research.topics[0].body.ja, "日本語が上書きされている");
 });
 
-test("キャプションは言語別、代替テキストは共通", () => {
+test("キャプションも代替テキストも言語別に入力できる", () => {
+  // 代替テキストは読み上げソフトが読む文なので、ページの言語に合わせる。
   const topic = structuredClone(research.topics[0]);
   const root = container();
   renderTopicForm(root, topic, { lang: "en", onLangSwitch: noop, onChange: noop, onPickImage: noop });
@@ -308,9 +309,10 @@ test("キャプションは言語別、代替テキストは共通", () => {
   assert.equal(topic.image.caption.en, "Phase diagram");
   assert.equal(topic.image.caption.ja, research.topics[0].image.caption.ja);
 
-  fieldControl(root, "代替テキスト").value = "shared alt";
+  fieldControl(root, "代替テキスト").value = "English alt";
   fieldControl(root, "代替テキスト").fire("input");
-  assert.equal(topic.image.alt, "shared alt", "代替テキストは言語で分けない");
+  assert.equal(topic.image.alt.en, "English alt");
+  assert.equal(topic.image.alt.ja, research.topics[0].image.alt.ja, "日本語が上書きされている");
 });
 
 test("画像のないテーマでも描画でき、追加ボタンが出る", () => {

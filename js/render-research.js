@@ -34,7 +34,7 @@ function imageHtml(image, lang) {
   const caption = pick(image.caption, lang);
   return [
     '    <div class="research-image">',
-    `        <img src="${escapeAttribute(image.src)}" alt="${escapeAttribute(image.alt)}" onerror="this.style.display='none'">`,
+    `        <img src="${escapeAttribute(image.src)}" alt="${escapeAttribute(pick(image.alt, lang))}" onerror="this.style.display='none'">`,
     caption ? `        <div class="img-caption">${escapeText(caption)}</div>` : "",
     "    </div>",
   ]
