@@ -130,7 +130,7 @@ def verify_meta(blocks: list[str], items: list[dict]) -> list[str]:
 
 
 def verify_news() -> tuple[list[str], int]:
-    html = (FIXTURES / "news.original.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "news.original.html.txt").read_text(encoding="utf-8")
     data = json.loads((ROOT / "data" / "news.json").read_text(encoding="utf-8"))
     items = data["items"]
     blocks = article_blocks(html)
@@ -199,7 +199,7 @@ def cv_parts(data: dict) -> list[str]:
 
 
 def verify_cv() -> tuple[list[str], int, int]:
-    html = (FIXTURES / "cv.original.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "cv.original.html.txt").read_text(encoding="utf-8")
     data = json.loads((ROOT / "data" / "cv.json").read_text(encoding="utf-8"))
     body = cv_container(html)
     failures: list[str] = []

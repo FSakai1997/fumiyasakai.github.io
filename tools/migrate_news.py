@@ -212,7 +212,7 @@ def parse_article(block: str) -> dict:
 
 
 def main() -> int:
-    html = (FIXTURES / "news.original.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "news.original.html.txt").read_text(encoding="utf-8")
     blocks = article_blocks(html)
     print(f"{len(blocks)} 件の記事を検出しました")
 

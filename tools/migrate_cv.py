@@ -70,7 +70,7 @@ def parse_profile(body: str) -> dict:
 
 
 def main() -> int:
-    html = (FIXTURES / "cv.original.html").read_text(encoding="utf-8")
+    html = (FIXTURES / "cv.original.html.txt").read_text(encoding="utf-8")
     start = html.index('<div class="container cv-container"')
     end = html.index('<section id="contact"', start)
     container = html[start:end]
