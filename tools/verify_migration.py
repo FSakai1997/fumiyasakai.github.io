@@ -12,6 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+TAG_NORMALIZATION = {"Publications": "Publication", "Awards": "Award", "NEWS": "News"}
+
 
 class TextExtractor(HTMLParser):
     """HTMLからタグを除いた可視テキストだけを取り出す。"""
@@ -42,6 +44,23 @@ def img_srcs(html: str) -> set[str]:
     return set(re.findall(r'<img[^>]+src="([^"]+)"', html))
 
 
+def first_difference(want: str, got: str) -> str:
+    """長い文字列どうしの、最初に食い違った位置とその前後を示す。"""
+    common = 0
+    while common < min(len(want), len(got)) and want[common] == got[common]:
+        common += 1
+    return (
+        f"{len(want)}字 vs {len(got)}字, {common}字目から相違\n"
+        f"    期待={want[common:common + 120]}\n"
+        f"    実際={got[common:common + 120]}"
+    )
+
+
+# --------------------------------------------------------------------------
+# ニュース
+# --------------------------------------------------------------------------
+
+
 def article_blocks(html: str) -> list[str]:
     """news.html から <article class="news-card"> ... </article> を切り出す。"""
     blocks = []
@@ -50,13 +69,12 @@ def article_blocks(html: str) -> list[str]:
     while True:
         i = html.find(needle, start)
         if i == -1:
-            break
+            return blocks
         j = html.find("</article>", i)
         if j == -1:
             raise ValueError(f"閉じられていない <article> が位置 {i} にあります")
         blocks.append(html[i : j + len("</article>")])
         start = j
-    return blocks
 
 
 def json_article_html(item: dict) -> str:
@@ -70,9 +88,6 @@ def json_article_html(item: dict) -> str:
         for link in citation.get("links", []):
             parts.append(f'<a href="{link["url"]}">{link["label"]}</a>')
     return "".join(parts)
-
-
-TAG_NORMALIZATION = {"Publications": "Publication", "Awards": "Award", "NEWS": "News"}
 
 
 def displayed_date(item: dict) -> str:
@@ -105,7 +120,7 @@ def verify_meta(blocks: list[str], items: list[dict]) -> list[str]:
     return failures
 
 
-def verify_news() -> list[str]:
+def verify_news() -> tuple[list[str], int]:
     html = (ROOT / "news.html").read_text(encoding="utf-8")
     data = json.loads((ROOT / "data" / "news.json").read_text(encoding="utf-8"))
     items = data["items"]
@@ -119,17 +134,12 @@ def verify_news() -> list[str]:
     for index, (block, item) in enumerate(zip(blocks, items)):
         label = f"news[{index}] {item.get('date', '?')} {item['ja']['title'][:24]}"
 
-        # 1. 可視テキストが完全に一致すること。
-        #    日付とタグ名はJSONで構造化するため、比較対象から除く。
+        # 1. 可視テキストが完全に一致すること。日付とタグは verify_meta が見る。
         block_body = re.sub(r'<div class="news-meta">.*?</div>', "", block, flags=re.S)
         want = visible_text(block_body)
         got = visible_text(json_article_html(item))
         if want != got:
-            failures.append(
-                f"{label}: 本文テキスト不一致\n"
-                f"    期待({len(want)}字)={want[:160]}\n"
-                f"    実際({len(got)}字)={got[:160]}"
-            )
+            failures.append(f"{label}: 本文テキスト不一致 " + first_difference(want, got))
 
         # 2. リンクがすべて保存されていること。
         want_links = hrefs(block)
@@ -147,12 +157,70 @@ def verify_news() -> list[str]:
         if want_imgs - got_imgs:
             failures.append(f"{label}: 失われた画像 {sorted(want_imgs - got_imgs)}")
 
-    return failures
+    return failures, len(items)
+
+
+# --------------------------------------------------------------------------
+# CV
+# --------------------------------------------------------------------------
+
+
+def cv_container(html: str) -> str:
+    """cv.html のうち、CV本体だけを切り出す。
+
+    ナビゲーション・ページヘッダ・Contact 節・フッタは移行対象外なので
+    比較範囲から除く。
+    """
+    start = html.index('<div class="container cv-container"')
+    start = html.index(">", start) + 1
+    end = html.index('<section id="contact"', start)
+    # Contact 節の直前にある </div> は cv-container の閉じタグなので落とす。
+    return html[start:end].rstrip().removesuffix("</div>")
+
+
+def cv_parts(data: dict) -> list[str]:
+    """cv.json の全内容を、比較用の文字列の並びにする。"""
+    parts = ["Profile", data["profile"]["ja"]["name"], *data["profile"]["ja"]["lines"]]
+    for section in data["sections"]:
+        parts.append(section["heading"])
+        for entry in section["entries"]:
+            parts.append(entry.get("date") or "")
+            parts.append(entry.get("ja") or "")
+    return parts
+
+
+def verify_cv() -> tuple[list[str], int, int]:
+    html = (ROOT / "cv.html").read_text(encoding="utf-8")
+    data = json.loads((ROOT / "data" / "cv.json").read_text(encoding="utf-8"))
+    body = cv_container(html)
+    failures: list[str] = []
+
+    want_headings = [h.strip() for h in re.findall(r'<h2 class="cv-heading">(.*?)</h2>', body, re.S)]
+    got_headings = ["Profile"] + [s["heading"] for s in data["sections"]]
+    if want_headings != got_headings:
+        failures.append(f"見出し不一致\n    期待={want_headings}\n    実際={got_headings}")
+
+    parts = cv_parts(data)
+    want_text = visible_text(body)
+    got_text = visible_text("".join(parts))
+    if want_text != got_text:
+        failures.append("CV本文テキスト不一致 " + first_difference(want_text, got_text))
+
+    missing = hrefs(body) - hrefs("".join(parts))
+    if missing:
+        failures.append(f"CVで失われたリンク {sorted(missing)}")
+
+    entry_total = sum(len(s["entries"]) for s in data["sections"])
+    return failures, len(data["sections"]), entry_total
+
+
+# --------------------------------------------------------------------------
 
 
 def main() -> int:
-    failures = verify_news()
-    news_count = len(json.loads((ROOT / "data" / "news.json").read_text(encoding="utf-8"))["items"])
+    news_failures, news_count = verify_news()
+    cv_failures, cv_sections, cv_entries = verify_cv()
+    failures = news_failures + cv_failures
 
     if failures:
         print(f"検証失敗: {len(failures)} 件\n")
@@ -160,7 +228,8 @@ def main() -> int:
             print(" -", f)
         return 1
 
-    print(f"検証成功: ニュース {news_count} 件すべてでテキスト・リンク・画像が一致しました")
+    print(f"検証成功: ニュース {news_count} 件でテキスト・リンク・画像・日付・タグが一致しました")
+    print(f"検証成功: CV {cv_sections} セクション / {cv_entries} エントリで見出し・テキスト・リンクが一致しました")
     return 0
 
 
