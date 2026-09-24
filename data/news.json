@@ -26,7 +26,7 @@
             {
               "label": {
                 "ja": "受賞者を見る &rarr;",
-                "en": "View the paper &rarr;"
+                "en": "View the page &rarr;"
               },
               "url": "https://www.agu.org/honors-home/announcement/section-awards-lectures"
             }
@@ -41,7 +41,7 @@
             {
               "label": {
                 "ja": "ホームページを見る &rarr;",
-                "en": "View the paper &rarr;"
+                "en": "View the page &rarr;"
               },
               "url": "https://www.agu.org/honors/sedi"
             }
